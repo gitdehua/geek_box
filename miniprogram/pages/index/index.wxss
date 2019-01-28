@@ -1,0 +1,52 @@
+/* pages/index/index.wxss */
+
+.section {
+  background-color: #fff;
+}
+
+.section>.item {
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 40rpx;
+  font-size: 32rpx !important;
+  color: #000 !important;
+  border: none;
+  background-color: transparent;
+}
+
+.section>.item:not(:last-child) {
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.section>.item::after {
+  content: "\3009";
+  float: right;
+  color: #bbb;
+}
+
+button[disabled]:not([type]) {
+  color: #555 !important;
+  opacity: 0.7;
+}
+
+.whenHover {
+  color: #555 !important;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  opacity: 0.7;
+}
+
+.section>button.item[plain][disabled] {
+  background-color: transparent;
+}
+
+.section>button.item {
+  text-align: left;
+  border-radius: 0;
+}
+
+.section>button.item::after {
+  width: auto;
+  position: static;
+  transform: none;
+  -webkit-transform: none;
+}

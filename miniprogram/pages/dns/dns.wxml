@@ -1,0 +1,37 @@
+<!--pages/dns/dns.wxml-->
+<form bindsubmit="submit">
+  <view class="section content">
+    <view class='item'>
+      <view class='title'>域名</view>
+      <view class='data'>
+        <input name="name" placeholder="example.com" maxlength="50" mode="text" value="{{title}}">{{title}}</input>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>指定服务器</view>
+      <view class='data'>
+        <switch name="useServer" bindchange="useServer" />
+      </view>
+    </view>
+    <view class='item' wx:if="{{useServer}}">
+      <view class='title'>服务器IP</view>
+      <view class='data'>
+        <input name="server" placeholder="8.8.8.8" type="digit"></input>
+      </view>
+    </view>
+  </view>
+  <view class="section control">
+    <button form-type="submit" type='primary'>查询</button>
+  </view>
+</form>
+
+<view wx:if="{{result}}" class="section content result">
+  <view class='item'>
+    <view class='title'>类型</view>
+    <view class='data'>记录值</view>
+  </view>
+  <view wx:for="{{result}}" class='item'>
+    <view class='title'>{{item.type}}</view>
+    <view class='data'>{{item.address}}{{item.exchange}}{{item.value}}{{item.entries}}{{item.nsname}}</view>
+  </view>
+</view>

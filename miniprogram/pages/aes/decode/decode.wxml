@@ -1,0 +1,29 @@
+<!--pages/aes/decode/decode.wxml-->
+<form bindsubmit="submit">
+  <view class="section content">
+    <view class="item-y">
+      <view class="title">内容</view>
+      <view class="data">
+        <textarea name="content" placeholder="请输入密文" maxlength="-1" value="{{content}}"></textarea>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>密钥</view>
+      <view class='data'>
+        <input name="key" placeholder="16位以内" maxlength="16" mode="text" value="{{title}}">{{title}}</input>
+      </view>
+    </view>
+  </view>
+  <view class="section control">
+    <button form-type="submit" type="primary">解密</button>
+  </view>
+  <view class="section content" wx:if="{{result}}">
+    <view class="item-y">
+      <view class="title">结果</view>
+      <view class="data">
+        <textarea placeholder="" maxlength="-1" value="{{result}}"></textarea>
+      </view>
+    </view>
+  </view>
+</form>
+<navigator class="navigator" url="/pages/aes/encode/encode">创建一个并发送</navigator>

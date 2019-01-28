@@ -1,0 +1,2 @@
+/* pages/base64/base64.wxss */
+@import "/style/encrypt.wxss";

@@ -1,0 +1,13 @@
+/* pages/aes/decode/decode.wxss */
+@import "/style/encrypt.wxss";
+
+.navigator {
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  color: #fff;
+  background-color: #0ee;
+  margin: 100rpx;
+  border-radius: 2rem;
+  font-weight: 900;
+}

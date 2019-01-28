@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/number/number",
+    "pages/base64/base64",
+    "pages/md5/md5",
+    "pages/dns/dns",
+    "pages/aes/aes",
+    "pages/aes/encode/encode",
+    "pages/aes/decode/decode",
+    "pages/test/test"
+  ],
+  "window": {
+    "backgroundColor": "#f8f8f8",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "极客宝箱",
+    "navigationBarTextStyle": "black"
+  }
+}

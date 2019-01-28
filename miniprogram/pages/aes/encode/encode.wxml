@@ -1,0 +1,32 @@
+<!--pages/aes/encode/encode.wxml-->
+<form bindsubmit="submit">
+  <view class="section content">
+    <view class="item-y">
+      <view class="title">内容</view>
+      <view class="data">
+        <textarea name="content" placeholder="500字以内"  maxlength="500" value="{{content}}"></textarea>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>密钥</view>
+      <view class='data'>
+        <input name="key" placeholder="16位以内" maxlength="16" mode="text" value="{{title}}">{{title}}</input>
+      </view>
+    </view>
+  </view>
+  <view class="section control">
+    <button form-type="submit" type="primary">加密</button>
+  </view>
+  <view class="section content" wx:if="{{result}}">
+    <view class="item-y">
+      <view class="title">结果</view>
+      <view class="data">
+        <textarea placeholder="" maxlength="-1" value="{{result}}"></textarea>
+      </view>
+      <view class="control">
+        <button type="primary" size="mini" bindtap="copy">复制</button>
+        <button open-type="share" type="primary" size="mini">发送给好友</button>
+      </view>
+    </view>
+  </view>
+</form>

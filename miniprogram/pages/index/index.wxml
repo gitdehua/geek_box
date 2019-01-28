@@ -1,0 +1,23 @@
+<!--pages/index/index.wxml-->
+
+<view class="section">
+  <navigator class="item" url="/pages/number/number" hover-class="whenHover">进制转换</navigator>
+</view>
+
+<view class="section">
+  <navigator class="item" url="/pages/base64/base64" hover-class="whenHover">BASE64</navigator>
+  <navigator class="item" url="/pages/md5/md5" hover-class="whenHover">MD5</navigator>
+</view>
+
+<view class="section">
+  <navigator class="item" url="/pages/aes/aes" hover-class="whenHover">AES加密&解密</navigator>
+  <navigator class="item" url="/pages/aes/encode/encode" hover-class="whenHover">发送密文</navigator>
+</view>
+
+<view class="section">
+  <navigator class="item" url="/pages/dns/dns" hover-class="whenHover">DNS查询</navigator>
+</view>
+
+<view class="section">
+  <button class="item" plain="true" open-type="share" hover-class="whenHover">分享</button>
+</view>

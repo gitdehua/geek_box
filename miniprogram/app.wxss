@@ -1,0 +1,48 @@
+/**app.wxss**/
+@import "style/common.wxss";
+@import "style/iconfont.wxss";
+@import "style/layout.wxss";
+
+page {
+  background-color: #f8f8f8;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.content {
+  background-color: #fff;
+}
+
+.content>.item {
+  height: 3em;
+  line-height: 3em;
+  display: flex;
+}
+
+.content>.item:not(:last-child), .content>.item-y:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.content>.item>.title {
+  width: 200rpx;
+  margin-right: 5px;
+  display: flex;
+}
+
+.content>.item>.data {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.content>.item-y {
+  padding: 1em 0;
+}
+
+.content>.item-y>.title {
+  padding-bottom: 0.5em;
+}

@@ -1,0 +1,25 @@
+<!--pages/base64/base64.wxml-->
+<form bindsubmit="submit">
+  <view class="section content">
+    <view class="item-y">
+      <view class="title">内容</view>
+      <view class="data">
+        <textarea name="content" placeholder="500字以内" maxlength="500" value="{{content}}"></textarea>
+      </view>
+    </view>
+  </view>
+  <view class="section control">
+    <button data-action="encode" form-type="submit" type="primary" size="mini">加密</button>
+    <button data-action="decode" form-type="submit" type="primary" size="mini">解密</button>
+  </view>
+  <view class="section content" wx:if="{{result}}">
+    <view class="item-y">
+      <view class="title">结果
+        <text bindtap="copy" class="copy"></text>
+      </view>
+      <view class="data">
+        <textarea placeholder="" maxlength="-1" value="{{result}}"></textarea>
+      </view>
+    </view>
+  </view>
+</form>

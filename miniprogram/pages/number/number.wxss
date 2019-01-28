@@ -1,0 +1,16 @@
+/* pages/number/number.wxss */
+
+.section {
+  background-color: #fff;
+  padding: 0 15px;
+}
+
+.content>.item input {
+  width: 100%;
+  height: 100%;
+  line-height: 100;
+}
+
+.btn-area {
+  padding: 15px;
+}

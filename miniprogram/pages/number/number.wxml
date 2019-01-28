@@ -1,0 +1,21 @@
+<!--pages/number/number.wxml-->
+<view class="section content">
+  <view class="item">
+    <view class="title">十进制</view>
+    <view class="data">
+      <input type="number" bindinput="getNumber" placeholder="请输入十进制,15位以内" maxlength="15" value="" />
+    </view>
+  </view>
+  <view class="item">
+    <view class="title">二进制</view>
+    <view class="data">{{n2}}</view>
+  </view>
+  <view class="item">
+    <view class="title">八进制</view>
+    <view class="data">{{n8}}</view>
+  </view>
+  <view class="item">
+    <view class="title">十六进制</view>
+    <view class="data">{{n16}}</view>
+  </view>
+</view>

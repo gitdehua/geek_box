@@ -1,0 +1,50 @@
+[class*=card] {
+  background-color: #fff;
+}
+
+.card {
+  margin: 8px;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-full {
+  margin: 8px 0;
+  padding: 8px 15px;
+}
+
+[class*=card]>.header {
+  height: 3em;
+  line-height: 3em;
+  position: relative;
+  padding-left: 0.8em;
+  margin-top: -8px;
+}
+
+[class*=card]>.header::before {
+  content: "";
+  border: 0.3em;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--theme-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -0.3em;
+}
+
+[class*=card]>.header>.right {
+  float: right;
+  margin-right: 5px;
+}
+
+[class*=card]>.header>.right::before {
+  font-family: "iconfont" !important;
+  content: "\e110";
+  color: #e64340;
+  font-size: larger;
+}
+
+[class*=card]>.header>text{
+  font-size: 36rpx;
+}
