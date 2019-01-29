@@ -4,7 +4,7 @@
     <view class='item'>
       <view class='title'>域名</view>
       <view class='data'>
-        <input name="name" placeholder="example.com" maxlength="50" mode="text" value="{{title}}">{{title}}</input>
+        <input name="name" placeholder="example.com" maxlength="50"/>
       </view>
     </view>
     <view class='item'>
@@ -16,7 +16,7 @@
     <view class='item' wx:if="{{useServer}}">
       <view class='title'>服务器IP</view>
       <view class='data'>
-        <input name="server" placeholder="8.8.8.8" type="digit"></input>
+        <input name="server" placeholder="8.8.8.8" type="digit"/>
       </view>
     </view>
   </view>

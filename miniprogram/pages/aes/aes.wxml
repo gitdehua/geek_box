@@ -10,7 +10,7 @@
     <view class='item'>
       <view class='title'>密钥</view>
       <view class='data'>
-        <input name="key" placeholder="50位以内" maxlength="50" mode="text" value="{{title}}">{{title}}</input>
+        <input name="key" placeholder="50位以内" maxlength="50"/>
       </view>
     </view>
   </view>

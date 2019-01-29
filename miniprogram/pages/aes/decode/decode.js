@@ -53,15 +53,15 @@ Page({
 
   submit: function(e) {
     var result = "",
-      content = e.detail.value.content,
+      content = this.data.content,
       key = e.detail.value.key;
 
     try {
       result = CryptoJS.enc.Utf8.stringify(CryptoJS.AES.decrypt(content, key));
-      if (!result) throw "请核实密钥";
+      if (!result) throw "";
     } catch (err) {
       wx.showToast({
-        title: `解密失败 ${err}`,
+        title: `解密失败,请核实密钥\n${err}`,
         icon: "none"
       });
     }

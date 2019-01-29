@@ -41,7 +41,7 @@
 				{
 					"id": 1,
 					"name": "test",
-					"pathName": "pages/aes/ciphertext/manage",
+					"pathName": "pages/aes/decode/decode",
 					"query": "aes_id=XE2Mc97E7L4woJgr",
 					"scene": null
 				}
