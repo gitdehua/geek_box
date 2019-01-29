@@ -1,1 +1,90 @@
-page{--theme-color:#f70}picker.afterIcon{position:relative;z-index:10}picker.afterIcon::after{font-family:"iconfont" !important;position:absolute;top:0;right:0;content:"\e106";color:#aaa;font-size:smaller;z-index:-1}picker.afterIcon[mode="date"]::after{content:"\e105";color:var(--theme-color);font-size:inherit}button.button-hover[type="primary"]{background-color:var(--theme-color) !important}button[type="primary"]{background-color:var(--theme-color) !important}radio .wx-radio-input.wx-radio-input-checked{border:none;background:var(--theme-color) !important}checkbox .wx-checkbox-input.wx-checkbox-input-checked{border:none;background:var(--theme-color) !important}switch .wx-switch-input{background:var(--theme-color) !important}switch .wx-switch-input.wx-switch-input-checked{border-color:var(--theme-color) !important}icon:not([color]) [class*="success"],icon:not([color]) .wx-icon-download{color:var(--theme-color) !important}
+page {
+  --theme-color: #f70;
+}
+
+picker.afterIcon {
+  position: relative;
+  z-index: 10;
+}
+
+picker.afterIcon::after {
+  font-family: "iconfont" !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "\e106";
+  color: #aaa;
+  font-size: smaller;
+  z-index: -1;
+}
+
+picker.afterIcon[mode="date"]::after {
+  content: "\e105";
+  color: var(--theme-color);
+  font-size: inherit;
+}
+
+button.button-hover[type="primary"] {
+  background-color: var(--theme-color) !important;
+}
+
+button[type="primary"] {
+  background-color: var(--theme-color) !important;
+}
+
+radio .wx-radio-input.wx-radio-input-checked {
+  border: none;
+  background: var(--theme-color) !important;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border: none;
+  background: var(--theme-color) !important;
+}
+
+switch .wx-switch-input {
+  background: var(--theme-color) !important;
+}
+
+switch .wx-switch-input.wx-switch-input-checked {
+  border-color: var(--theme-color) !important;
+}
+
+icon:not([color]) [class*="success"], icon:not([color]) .wx-icon-download {
+  color: var(--theme-color) !important;
+}
+
+textarea[disabled] {
+  background-color: #f6f6f6;
+}
+
+textarea[disabled], input[disabled] {
+  color: #666;
+}
+
+view.textarea {
+  padding: 20rpx;
+  border-radius: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+  color: #666;
+  border: 1px solid #ddd;
+  max-height: 150px;
+  word-break: break-all;
+  overflow-y: auto;
+}
+
+navigator.button {
+  flex: 1;
+  line-height: 2.3;
+  font-size: 13px;
+  padding: 0 1.34em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  text-align: center;
+  overflow: hidden;
+  color: #000;
+  background-color: #f8f8f8;
+}

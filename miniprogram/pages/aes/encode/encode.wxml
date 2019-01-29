@@ -30,3 +30,4 @@
     </view>
   </view>
 </form>
+<navigator class="navigator" url="/pages/aes/ciphertext/manage">管理我的密文</navigator>

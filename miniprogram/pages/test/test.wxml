@@ -19,6 +19,7 @@
     <view class="edit" bindtap="navigateTo" data-index="{{id}}">编辑</view>
   </view>
 </view>
+
 <view class="card-full">
   <view class="header">
     <text>科目信息</text>

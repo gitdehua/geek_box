@@ -31,7 +31,7 @@ Page({
       data: {
         count: 0,
         content: result,
-        data: new Date()
+        date: new Date()
       },
       success: res => {
         this.setData({
@@ -39,10 +39,6 @@ Page({
           result
         });
         console.log('新增记录成功，记录 _id: ', res._id);
-        wx.pageScrollTo({
-          scrollTop: 3000,
-          duration: 300
-        })
         wx.hideLoading();
       },
       fail: err => {
