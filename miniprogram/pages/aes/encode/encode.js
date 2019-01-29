@@ -31,7 +31,7 @@ Page({
       data: {
         count: 0,
         content: result,
-        data: new Date()
+        date: new Date()
       },
       success: res => {
         this.setData({

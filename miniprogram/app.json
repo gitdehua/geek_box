@@ -8,6 +8,7 @@
     "pages/aes/aes",
     "pages/aes/encode/encode",
     "pages/aes/decode/decode",
+    "pages/aes/ciphertext/manage",
     "pages/test/test"
   ],
   "window": {
