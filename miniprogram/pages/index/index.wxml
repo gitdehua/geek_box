@@ -19,5 +19,9 @@
 </view>
 
 <view class="section">
+  <navigator class="item" url="/pages/curl/curl" hover-class="whenHover">cURL</navigator>
+</view>
+
+<view class="section">
   <button class="item" plain="true" open-type="share" hover-class="whenHover">分享</button>
 </view>

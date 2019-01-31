@@ -3,7 +3,7 @@
 	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
 		"urlCheck": true,
-		"es6": false,
+		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
@@ -11,7 +11,7 @@
 	},
 	"appid": "wx684dbb6844c8943a",
 	"projectname": "geek_box",
-	"libVersion": "2.2.5",
+	"libVersion": "2.5.0",
 	"compileType": "miniprogram",
 	"condition": {
 		"search": {
@@ -41,7 +41,7 @@
 				{
 					"id": 1,
 					"name": "test",
-					"pathName": "pages/aes/decode/decode",
+					"pathName": "pages/curl/curl",
 					"query": "aes_id=XE2Mc97E7L4woJgr",
 					"scene": null
 				}

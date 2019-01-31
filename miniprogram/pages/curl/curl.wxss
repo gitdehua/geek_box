@@ -1,0 +1,46 @@
+/* pages/curl/curl.wxss */
+@import "/style/encrypt.wxss";
+
+tabs>bar {
+  display: flex;
+  line-height: 3em;
+}
+
+tabs>bar>view {
+  flex: 1;
+  text-align: center;
+}
+
+tabs>bar>view.checked {
+  border-bottom: 3px solid var(--theme-color);
+  color: var(--theme-color);
+}
+
+.content>.item>.title{
+  width: 130rpx;
+}
+
+.content>.item>.data {
+  overflow-x: auto;
+}
+
+content.content>.item>.title {
+  overflow-x: auto;
+  width: 230rpx;
+  white-space: nowrap;
+}
+
+[class*=fonticon]::before {
+  font-family: "iconfont" !important;
+  color: var(--theme-color);
+  font-size: larger;
+}
+
+.fonticon_e108::before {
+  content: "\e108";
+  color: #e64340;
+}
+
+.fonticon_e111::before {
+  content: "\e111";
+}

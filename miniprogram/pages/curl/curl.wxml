@@ -1,0 +1,99 @@
+<!--pages/curl/curl.wxml-->
+<form bindsubmit='submit'>
+  <view class='section content'>
+    <view class='item'>
+      <view class='title'>协议</view>
+      <view class='data'>
+        <radio-group name='scheme'>
+          <radio value="http" checked='true' data-label='http' />
+          <radio value="https" data-label='https' />
+        </radio-group>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>主机</view>
+      <view class='data'>
+        <input name="host" value='' placeholder="example.com" />
+      </view>
+    </view>
+    <!--view class='item'>
+      <view class='title'>端口</view>
+      <view class='data'>
+        <input name="port" value='' placeholder="8080" type='number' />
+      </view>
+    </view-->
+    <view class='item'>
+      <view class='title'>phth</view>
+      <view class='data'>
+        <input name="path" value='' maxlength='1000' placeholder="path1/path2" />
+      </view>
+    </view>
+    <view class='item'>
+      <view class='title'>方法</view>
+      <view class='data'>
+        <radio-group name='method' bindchange="changeMethod">
+          <radio value="GET" checked='true' data-label='GET' />
+          <radio value="POST" data-label='POST' />
+        </radio-group>
+      </view>
+    </view>
+    <tabs>
+      <bar>
+        <view data-tab_id='1' bindtap='changTab' class='{{tab_id==1?"checked":""}}'>params</view>
+        <view data-tab_id='2' bindtap='changTab' class='{{tab_id==2?"checked":""}}'>header</view>
+        <view wx:if='{{method=="POST"}}' data-tab_id='3' bindtap='changTab' class='{{tab_id==3?"checked":""}}'>body</view>
+      </bar>
+      <content style='{{tab_id!=1?"display:none;":""}}' class='content'>
+        <view class='item'>
+          <view class='title'>参数</view>
+          <view class='data'>
+            <input name="params" maxlength='2000' value='' placeholder="key=value&key2=value2" />
+          </view>
+        </view>
+      </content>
+      <content wx:if='{{tab_id==2}}' class='content'>
+        <view class='item'>
+          <view class='title'>key</view>
+          <view class='data'>value</view>
+        </view>
+        <view wx:key class='item' wx:for='{{headers}}'>
+          <view class='title'>{{index}}</view>
+          <view class='data'>{{item}}</view>
+          <view class='fonticon_e108' data-key='{{index}}' bindtap='remove_header'></view>
+        </view>
+        <view class='item' wx:if='{{input}}'>
+          <view class='title'>
+            <input data-name='header_key' placeholder='key' bindinput='inputChange' style='height:100%' />
+          </view>
+          <view class='data'>
+            <input data-name='header_value' placeholder='value' bindinput='inputChange' />
+          </view>
+        </view>
+        <view class="section control">
+          <button size="mini" bindtap='{{input?"save_header":"add_header"}}'>{{input?"保存":"添加"}}</button>
+        </view>
+      </content>
+      <content style='{{tab_id!=3?"display:none;":""}}'>
+        <textarea name='content' placeholder='body' value='' maxlength='-1'></textarea>
+      </content>
+    </tabs>
+  </view>
+  <view class='section'>
+    <button form-type='submit' type='primary'>发送</button>
+  </view>
+  <view class='section content' wx:if='{{msg}}'>
+    <view class='item-y'>
+      <view class='title'>header</view>
+      <view class='data'>
+        <textarea placeholder='' maxlength='-1' value='{{header}}'></textarea>
+      </view>
+    </view>
+    <view class='item-y'>
+      <view class='title'>body</view>
+      <view class='data'>
+        <image wx:if='{{imgURL}}' mode='aspectFit' style='width:100%;' src="{{imgURL}}"></image>
+        <textarea wx:else placeholder='' maxlength='-1' value='{{body}}'></textarea>
+      </view>
+    </view>
+  </view>
+</form>

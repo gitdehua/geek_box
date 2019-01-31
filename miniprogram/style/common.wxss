@@ -33,12 +33,17 @@ button[type="primary"] {
 }
 
 radio .wx-radio-input.wx-radio-input-checked {
-  border: none;
+  border-color: var(--theme-color) !important;
   background: var(--theme-color) !important;
 }
 
+radio::after {
+  content: attr(data-label);
+  padding-right: 1em;
+}
+
 checkbox .wx-checkbox-input.wx-checkbox-input-checked {
-  border: none;
+  border-color: var(--theme-color) !important;
   background: var(--theme-color) !important;
 }
 
