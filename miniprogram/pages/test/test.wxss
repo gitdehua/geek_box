@@ -1,5 +1,0 @@
-/* miniprogram/pages/test/test.wxss */
-
-[class*=card]>.header {
-  border-bottom: 1px solid var(--theme-color);
-}
