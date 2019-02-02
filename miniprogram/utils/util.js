@@ -1,4 +1,4 @@
-const host = "https://www.dehuaio.com";
+const host = "https://www.dehuaio.com/api";
 
 const formatTime = function(date, delimiter) {
   const year = date.getFullYear()
