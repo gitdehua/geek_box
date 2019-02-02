@@ -9,6 +9,12 @@ page {
   line-height: 1.6;
 }
 
+[class*=fonticon]::before {
+  font-family: "iconfont" !important;
+  color: var(--theme-color);
+  font-size: larger;
+}
+
 .section {
   margin-bottom: 10px;
 }

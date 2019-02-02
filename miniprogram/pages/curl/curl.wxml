@@ -41,7 +41,6 @@
       <bar>
         <view data-tab_id='1' bindtap='changTab' class='{{tab_id==1?"checked":""}}'>params</view>
         <view data-tab_id='2' bindtap='changTab' class='{{tab_id==2?"checked":""}}'>header</view>
-        <view wx:if='{{method=="POST"}}' data-tab_id='3' bindtap='changTab' class='{{tab_id==3?"checked":""}}'>body</view>
       </bar>
       <content style='{{tab_id!=1?"display:none;":""}}' class='content'>
         <view class='item'>
@@ -61,39 +60,61 @@
           <view class='data'>{{item}}</view>
           <view class='fonticon_e108' data-key='{{index}}' bindtap='remove_header'></view>
         </view>
-        <view class='item' wx:if='{{input}}'>
-          <view class='title'>
-            <input data-name='header_key' placeholder='key' bindinput='inputChange' style='height:100%' />
-          </view>
-          <view class='data'>
-            <input data-name='header_value' placeholder='value' bindinput='inputChange' />
-          </view>
-        </view>
         <view class="section control">
-          <button size="mini" bindtap='{{input?"save_header":"add_header"}}'>{{input?"保存":"添加"}}</button>
+          <button size="mini" bindtap='add_header'>添加</button>
         </view>
-      </content>
-      <content style='{{tab_id!=3?"display:none;":""}}'>
-        <textarea name='content' placeholder='body' value='' maxlength='-1'></textarea>
       </content>
     </tabs>
+    <view class='item-y' wx:if='{{method=="POST"}}'>
+      <view class='title'>body</view>
+      <view class='data'>
+        <textarea name='content' placeholder='body' value='' maxlength='-1'></textarea>
+      </view>
+    </view>
   </view>
   <view class='section'>
     <button form-type='submit' type='primary'>发送</button>
   </view>
-  <view class='section content' wx:if='{{msg}}'>
-    <view class='item-y'>
-      <view class='title'>header</view>
-      <view class='data'>
-        <textarea placeholder='' maxlength='-1' value='{{header}}'></textarea>
+</form>
+
+<form class='mask' bindsubmit='save_header' wx:if='{{input}}'>
+  <view class="card">
+    <view class="header">
+      <text>请输入</text>
+      <text bindtap="save_header" class="right fonticon_e112"></text>
+    </view>
+    <view class="content">
+      <view class="item">
+        <view class="title">key</view>
+        <view class="data">
+          <input name='key' placeholder='key' />
+        </view>
+      </view>
+      <view class="item">
+        <view class="title">value</view>
+        <view class="data">
+          <input name='value' placeholder='value' />
+        </view>
       </view>
     </view>
-    <view class='item-y'>
-      <view class='title'>body</view>
-      <view class='data'>
-        <image wx:if='{{imgURL}}' mode='aspectFit' style='width:100%;' src="{{imgURL}}"></image>
-        <textarea wx:else placeholder='' maxlength='-1' value='{{body}}'></textarea>
-      </view>
+    <view class="control">
+      <button size="mini" form-type='submit'>保存</button>
     </view>
   </view>
 </form>
+
+<view class='section content' wx:if='{{msg}}'>
+  <view class='item-y'>
+    <view class='title'>header</view>
+    <view class='data'>
+      <textarea placeholder='' maxlength='-1' value='{{header}}'></textarea>
+    </view>
+  </view>
+  <view class='item-y'>
+    <view class='title'>body</view>
+    <view class='data'>
+      <image wx:if='{{imgURL}}' mode='aspectFit' style='width:100%;' src="{{imgURL}}"></image>
+      <textarea wx:else placeholder='' maxlength='-1' value='{{body}}'></textarea>
+    </view>
+  </view>
+</view>

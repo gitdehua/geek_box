@@ -16,7 +16,7 @@ tabs>bar>view.checked {
   color: var(--theme-color);
 }
 
-.content>.item>.title{
+.content>.item>.title {
   width: 130rpx;
 }
 
@@ -30,17 +30,12 @@ content.content>.item>.title {
   white-space: nowrap;
 }
 
-[class*=fonticon]::before {
-  font-family: "iconfont" !important;
-  color: var(--theme-color);
-  font-size: larger;
-}
-
 .fonticon_e108::before {
   content: "\e108";
   color: #e64340;
 }
 
-.fonticon_e111::before {
-  content: "\e111";
+.fonticon_e112::before {
+  content: "\e112" !important;
+  color: #666 !important;
 }

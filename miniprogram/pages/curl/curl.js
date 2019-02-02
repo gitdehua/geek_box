@@ -131,19 +131,15 @@ Page({
   },
 
   save_header: function(e) {
+    console.log(e);
     var headers = this.data.headers;
-    headers[this.data.header_key] = this.data.header_value;
+    if (e.type == "submit" && e.detail.value.key != "") {
+      headers[e.detail.value.key] = e.detail.value.value;
+    }
     this.setData({
       headers,
       input: false
     });
-  },
-
-  inputChange: function(e) {
-    var data = {};
-    data[e.target.dataset.name] = e.detail.value;
-    this.setData(data);
-    console.log(data)
   },
 
   /**
