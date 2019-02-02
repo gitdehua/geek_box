@@ -1,7 +1,3 @@
-page {
-  --theme-color: #f70;
-}
-
 picker.afterIcon {
   position: relative;
   z-index: 10;

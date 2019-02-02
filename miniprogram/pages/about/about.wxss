@@ -1,2 +1,2 @@
 /* pages/about/about.wxss */
-@import "/style/encrypt.wxss";
+@import "/style/form.wxss";

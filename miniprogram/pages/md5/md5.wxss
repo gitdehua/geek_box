@@ -1,2 +1,2 @@
 /* pages/md5/md5.wxss */
-@import "/style/encrypt.wxss";
+@import "/style/form.wxss";

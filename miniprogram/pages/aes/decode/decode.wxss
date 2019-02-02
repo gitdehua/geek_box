@@ -1,5 +1,5 @@
 /* pages/aes/decode/decode.wxss */
-@import "/style/encrypt.wxss";
+@import "/style/form.wxss";
 
 .navigator {
   height: 3rem;

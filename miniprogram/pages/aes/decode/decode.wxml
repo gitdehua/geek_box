@@ -21,7 +21,7 @@
     <view class="item-y">
       <view class="title">结果</view>
       <view class="data">
-        <textarea placeholder="" maxlength="-1" value="{{result}}"></textarea>
+        <textarea show-confirm-bar='false' placeholder="" maxlength="-1" value="{{result}}"></textarea>
       </view>
     </view>
   </view>

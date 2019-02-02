@@ -68,7 +68,7 @@
     <view class='item-y' wx:if='{{method=="POST"}}'>
       <view class='title'>body</view>
       <view class='data'>
-        <textarea name='content' placeholder='body' value='' maxlength='-1'></textarea>
+        <textarea show-confirm-bar='false' name='content' placeholder='body' value='' maxlength='-1'></textarea>
       </view>
     </view>
   </view>
@@ -107,14 +107,14 @@
   <view class='item-y'>
     <view class='title'>header</view>
     <view class='data'>
-      <textarea placeholder='' maxlength='-1' value='{{header}}'></textarea>
+      <textarea show-confirm-bar='false' placeholder='' maxlength='-1' value='{{header}}'></textarea>
     </view>
   </view>
   <view class='item-y'>
     <view class='title'>body</view>
     <view class='data'>
       <image wx:if='{{imgURL}}' mode='aspectFit' style='width:100%;' src="{{imgURL}}"></image>
-      <textarea wx:else placeholder='' maxlength='-1' value='{{body}}'></textarea>
+      <textarea show-confirm-bar='false' wx:else placeholder='' maxlength='-1' value='{{body}}'></textarea>
     </view>
   </view>
 </view>

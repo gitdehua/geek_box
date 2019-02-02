@@ -45,7 +45,7 @@
   font-size: larger;
 }
 
-[class*=card]>.header>text{
+[class*=card]>.header>text {
   font-size: 36rpx;
 }
 
@@ -65,4 +65,9 @@
 .mask>view {
   max-height: 80vh;
   max-width: 80vw;
+}
+
+.mask>.card {
+  overflow-y: auto;
+  width: 80vw;
 }

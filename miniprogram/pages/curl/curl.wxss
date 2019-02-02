@@ -1,5 +1,5 @@
 /* pages/curl/curl.wxss */
-@import "/style/encrypt.wxss";
+@import "/style/form.wxss";
 
 tabs>bar {
   display: flex;
@@ -38,4 +38,12 @@ content.content>.item>.title {
 .fonticon_e112::before {
   content: "\e112" !important;
   color: #666 !important;
+}
+
+.result>.card>.header {
+  border-bottom: 1px solid var(--theme-color);
+}
+
+.mask>.card>.section {
+  padding: 0;
 }
