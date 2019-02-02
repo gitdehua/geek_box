@@ -18,7 +18,7 @@ exports.main = async(event, context) => new Promise((resolve, reject) => {
       try {
         body = JSON.parse(body);
         syncDB(body).then(() => {
-          db.collection('app_conf').doc('AccessToken').update({
+          db.collection('app_config').doc('AccessToken').update({
             data: {
               value: body.access_token
             }
@@ -44,7 +44,7 @@ function syncDB(data) {
     try {
       var md5 = crypto.createHash('md5');
       request({
-        url: "https://www.dehuaio.com/UpdateAccessToken.php",
+        url: "https://www.dehuaio.com/api/UpdateAccessToken.php",
         method: "POST",
         json: true,
         headers: {
