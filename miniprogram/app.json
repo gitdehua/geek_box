@@ -10,6 +10,7 @@
     "pages/aes/decode/decode",
     "pages/aes/ciphertext/manage",
     "pages/curl/curl",
+    "pages/about/about",
     "pages/test/test"
   ],
   "window": {

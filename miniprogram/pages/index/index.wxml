@@ -23,5 +23,6 @@
 </view>
 
 <view class="section">
+  <navigator class="item" url="/pages/about/about" hover-class="whenHover">关于</navigator>
   <button class="item" plain="true" open-type="share" hover-class="whenHover">分享</button>
 </view>
