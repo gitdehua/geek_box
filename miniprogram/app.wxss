@@ -29,6 +29,7 @@ page {
   height: 3em;
   line-height: 3em;
   display: flex;
+  box-sizing: border-box;
 }
 
 .content>.item:not(:last-child), .content>.item-y:not(:last-child) {

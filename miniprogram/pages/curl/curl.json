@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "cURL"
+  "navigationBarTitleText": "cURL",
+  "usingComponents": {
+    "img": "/component/img/img"
+  }
 }

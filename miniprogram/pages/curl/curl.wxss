@@ -1,19 +1,43 @@
 /* pages/curl/curl.wxss */
 @import "/style/form.wxss";
+tabs{
+  display: block;
+}
 
-tabs>bar {
+tab-bar {
   display: flex;
   line-height: 3em;
 }
 
-tabs>bar>view {
+tab-bar>view {
   flex: 1;
   text-align: center;
 }
 
-tabs>bar>view.checked {
+tab {
+  display: none;
+}
+
+tab.show{
+  display: block;
+  animation: tab-change 0.5s ease-in-out;
+}
+
+tab-bar>view.checked {
   border-bottom: 3px solid var(--theme-color);
   color: var(--theme-color);
+}
+
+@keyframes tab-change {
+  from {
+    opacity: 0;
+    transform: translateX(50rpx);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .content>.item>.title {
@@ -24,7 +48,7 @@ tabs>bar>view.checked {
   overflow-x: auto;
 }
 
-content.content>.item>.title {
+tab.headers>.item>.title {
   overflow-x: auto;
   width: 230rpx;
   white-space: nowrap;
@@ -38,12 +62,4 @@ content.content>.item>.title {
 .fonticon_e112::before {
   content: "\e112" !important;
   color: #666 !important;
-}
-
-.result>.card>.header {
-  border-bottom: 1px solid var(--theme-color);
-}
-
-.mask>.card>.section {
-  padding: 0;
 }

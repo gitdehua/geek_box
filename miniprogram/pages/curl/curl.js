@@ -9,7 +9,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tab_id: 1,
+    current: 0,
+    tab_id: 0,
     input: false,
     headers: {}
   },
@@ -112,7 +113,7 @@ Page({
   },
 
   changTab: function(e) {
-    this.setData(e.target.dataset)
+    this.setData(e.target.dataset);
   },
 
   remove_header: function(e) {
