@@ -2,6 +2,7 @@
 
 .section {
   background-color: #fff;
+  padding: 0;
 }
 
 .section>.item {
