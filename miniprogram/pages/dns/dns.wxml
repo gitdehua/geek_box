@@ -35,3 +35,5 @@
     <view class='data'>{{item.address}}{{item.exchange}}{{item.value}}{{item.entries}}{{item.nsname}}</view>
   </view>
 </view>
+
+<tab_bar />

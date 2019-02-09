@@ -4,30 +4,32 @@
     <view class="item-y">
       <view class="title">内容</view>
       <view class="data">
-        <textarea show-confirm-bar='{{false}}' name="content" placeholder="500字以内"  maxlength="500" value="{{content}}"></textarea>
+        <textarea show-confirm-bar='{{false}}' name="content" placeholder="500字以内" maxlength="500" value="{{content}}"></textarea>
       </view>
     </view>
     <view class='item'>
       <view class='title'>密钥</view>
       <view class='data'>
-        <input name="key" placeholder="16位以内" maxlength="16"/>
+        <input name="key" placeholder="16位以内" maxlength="16" />
       </view>
     </view>
   </view>
   <view class="section control">
     <button form-type="submit" type="primary">加密</button>
   </view>
-  <view class="section content" wx:if="{{result}}">
-    <view class="item-y">
-      <view class="title">结果</view>
-      <view class="data">
-        <textarea show-confirm-bar='{{false}}' placeholder="" maxlength="-1" value="{{result}}"></textarea>
-      </view>
-      <view class="control">
-        <button type="primary" size="mini" bindtap="copy">复制</button>
-        <button open-type="share" type="primary" size="mini">发送给好友</button>
-      </view>
+</form>
+<view class="section content" wx:if="{{result}}">
+  <view class="item-y">
+    <view class="title">结果</view>
+    <view class="data">
+      <textarea show-confirm-bar='{{false}}' placeholder="" maxlength="-1" value="{{result}}"></textarea>
+    </view>
+    <view class="control">
+      <button type="primary" size="mini" bindtap="copy">复制</button>
+      <button open-type="share" type="primary" size="mini">发送给好友</button>
     </view>
   </view>
-</form>
-<navigator class="navigator" url="/pages/aes/ciphertext/manage">管理我的密文</navigator>
+</view>
+<navigator class="nav-bar" url="/pages/aes/ciphertext/manage">管理我的密文</navigator>
+
+<tab_bar />

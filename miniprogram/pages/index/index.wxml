@@ -10,16 +10,7 @@
 </view>
 
 <view class="section">
-  <navigator class="item" url="/pages/aes/aes" hover-class="whenHover">AES加密&解密</navigator>
-  <navigator class="item" url="/pages/aes/encode/encode" hover-class="whenHover">发送密文</navigator>
-</view>
-
-<view class="section">
   <navigator class="item" url="/pages/dns/dns" hover-class="whenHover">DNS查询</navigator>
-</view>
-
-<view class="section">
-  <navigator class="item" url="/pages/curl/curl" hover-class="whenHover">cURL</navigator>
 </view>
 
 <view class="section">

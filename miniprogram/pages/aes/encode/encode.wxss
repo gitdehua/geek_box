@@ -1,16 +1,2 @@
 /* pages/aes/encode/encode.wxss */
 @import "/style/form.wxss";
-
-.navigator {
-  background-color: #fff;
-  font-size: 32rpx;
-  height: 3rem;
-  line-height: 3rem;
-  padding: 0 40rpx;
-}
-
-.navigator::after {
-  content: "\3009";
-  float: right;
-  color: #bbb;
-}

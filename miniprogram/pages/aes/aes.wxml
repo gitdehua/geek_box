@@ -10,7 +10,7 @@
     <view class='item'>
       <view class='title'>密钥</view>
       <view class='data'>
-        <input name="key" placeholder="50位以内" maxlength="50"/>
+        <input name="key" placeholder="50位以内" maxlength="50" />
       </view>
     </view>
   </view>
@@ -18,14 +18,16 @@
     <button data-action="encode" form-type="submit" type="primary" size="mini">加密</button>
     <button data-action="decode" form-type="submit" type="primary" size="mini">解密</button>
   </view>
-  <view class="section content" wx:if="{{result}}">
-    <view class="item-y">
-      <view class="title">结果
-        <text bindtap="copy" class="copy"></text>
-      </view>
-      <view class="data">
-        <textarea show-confirm-bar='{{false}}' placeholder="" maxlength="-1" value="{{result}}"></textarea>
-      </view>
+</form>
+<view class="section content" wx:if="{{result}}">
+  <view class="item-y">
+    <view class="title">结果
+      <text bindtap="copy" class="copy"></text>
+    </view>
+    <view class="data">
+      <textarea show-confirm-bar='{{false}}' placeholder="" maxlength="-1" value="{{result}}"></textarea>
     </view>
   </view>
-</form>
+</view>
+
+<navigator class="nav-bar" url="/pages/aes/encode/encode" hover-class="whenHover">发送密文</navigator>

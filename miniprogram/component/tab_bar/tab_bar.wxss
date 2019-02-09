@@ -1,0 +1,39 @@
+/* component/tab_bar/tab_bar.wxss */
+
+.bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 110rpx;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: space-around;
+  justify-content: space-around;
+}
+
+.bar>navigator {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #fff;
+  opacity: 1;
+  padding: 3px 0;
+  box-sizing: border-box;
+}
+
+.navigator-hover{
+  background-color: #fff;
+  opacity: 1;
+}
+
+.bar>navigator>image{
+  width: 100%;
+}
+
+.bar>navigator>text{
+  text-align: center;
+  font-size: 24rpx;
+  color: #666
+}

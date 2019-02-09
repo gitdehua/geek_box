@@ -9,16 +9,18 @@
     </view>
   </view>
   <view class="section">
-    <button form-type="submit" type="primary">加密</button>
-  </view>
-  <view class="section content" wx:if="{{result}}">
-    <view class="item-y">
-      <view class="title">结果
-        <text bindtap="copy" class="copy"></text>
-      </view>
-      <view class="data">
-        <textarea show-confirm-bar='{{false}}' placeholder="" value="{{result}}"></textarea>
-      </view>
-    </view>
+    <button form-type="submit" type="primary">计算</button>
   </view>
 </form>
+<view class="section content" wx:if="{{result}}">
+  <view class="item-y">
+    <view class="title">结果
+      <text bindtap="copy" class="copy"></text>
+    </view>
+    <view class="data">
+      <textarea show-confirm-bar='{{false}}' placeholder="" value="{{result}}"></textarea>
+    </view>
+  </view>
+</view>
+
+<tab_bar />

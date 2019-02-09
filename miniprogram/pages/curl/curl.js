@@ -78,7 +78,12 @@ Page({
       success: (res) => {
         console.log(res);
         wx.hideLoading();
-        if (/base64/.test(res.data.type)) {
+        if (res.data.msg == "error") {
+          wx.showToast({
+            title: '请求失败\n请检查',
+            icon: 'none'
+          })
+        } else if (/base64/.test(res.data.type)) {
           wx.showToast({
             title: '数据非文本，已进行BASE64编码',
             icon: 'none'

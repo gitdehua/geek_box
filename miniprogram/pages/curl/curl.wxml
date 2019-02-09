@@ -103,7 +103,7 @@
   </view>
 </form>
 
-<view class='section content' wx:if='{{msg}}'>
+<view class='section content' wx:if='{{msg=="ok"}}'>
   <view class='item-y'>
     <view class='title'>header</view>
     <view class='data'>

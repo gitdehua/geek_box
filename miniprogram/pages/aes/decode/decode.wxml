@@ -10,20 +10,22 @@
     <view class='item'>
       <view class='title'>密钥</view>
       <view class='data'>
-        <input name="key" placeholder="16位以内" maxlength="16"/>
+        <input name="key" placeholder="16位以内" maxlength="16" />
       </view>
     </view>
   </view>
   <view class="section control">
     <button form-type="submit" type="primary">解密</button>
   </view>
-  <view class="section content" wx:if="{{result}}">
-    <view class="item-y">
-      <view class="title">结果</view>
-      <view class="data">
-        <textarea show-confirm-bar='{{false}}' placeholder="" maxlength="-1" value="{{result}}"></textarea>
-      </view>
+</form>
+<view class="section content" wx:if="{{result}}">
+  <view class="item-y">
+    <view class="title">结果</view>
+    <view class="data">
+      <textarea show-confirm-bar='{{false}}' placeholder="" maxlength="-1" value="{{result}}"></textarea>
     </view>
   </view>
-</form>
+</view>
 <navigator class="navigator" url="/pages/aes/encode/encode">创建一个并发送</navigator>
+
+<tab_bar />

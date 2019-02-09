@@ -1,6 +1,7 @@
 <!--pages/about/about.wxml-->
 <view class='section content'>
   <image src='https://www.dehuaio.com/geek_box.jpg' mode='aspectFit' style='width:100%;'></image>
+  <view class='info'>{{info}}</view>
   <view class='item'>
     <view class='title'>appid</view>
     <view class='data'>{{appid}}</view>

@@ -19,5 +19,35 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "极客宝箱",
     "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "img": "/component/img/img",
+    "tab_bar":"/component/tab_bar/tab_bar"
+  },
+  "tabBar": {
+    "color": "#777",
+    "selectedColor": "#f80",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_l.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/aes/aes",
+        "iconPath": "images/lock.png",
+        "selectedIconPath": "images/lock_l.png",
+        "text": "AES"
+      },
+      {
+        "pagePath": "pages/curl/curl",
+        "iconPath": "images/curl.png",
+        "selectedIconPath": "images/curl_l.png",
+        "text": "cURL"
+      }
+    ]
   }
 }

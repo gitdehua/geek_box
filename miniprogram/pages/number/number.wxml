@@ -19,3 +19,5 @@
     <view class="data">{{n16}}</view>
   </view>
 </view>
+
+<tab_bar />

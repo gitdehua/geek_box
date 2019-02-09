@@ -55,3 +55,17 @@ page {
 .content>.item-y>.title {
   padding-bottom: 0.5em;
 }
+
+.nav-bar {
+  background-color: #fff;
+  font-size: 32rpx;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 40rpx;
+}
+
+.nav-bar::after {
+  content: "\3009";
+  float: right;
+  color: #bbb;
+}
