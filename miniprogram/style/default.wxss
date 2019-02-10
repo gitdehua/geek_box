@@ -89,3 +89,25 @@ navigator.button {
   color: #000;
   background-color: #f8f8f8;
 }
+
+button.nav {
+  font-size: 32rpx !important;
+  color: #000 !important;
+  border: none;
+  text-align: left;
+  border-radius: 0;
+}
+
+button.nav.button-hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+}
+
+button.nav::after {
+  content: "\3009";
+  float: right;
+  color: #bbb;
+  width: auto;
+  position: static;
+  transform: none;
+}

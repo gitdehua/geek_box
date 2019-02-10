@@ -16,7 +16,7 @@ Page({
    */
   onLoad: function(options) {
     wx.request({
-      url: `${host}/WXMiniAppInfo.php`,
+      url: `${host}/WXAppletInfo.php`,
       method: 'GET',
       success: res => {
         console.log(res);

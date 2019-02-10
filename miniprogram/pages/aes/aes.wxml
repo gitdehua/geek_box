@@ -30,4 +30,4 @@
   </view>
 </view>
 
-<navigator class="nav-bar" url="/pages/aes/encode/encode" hover-class="whenHover">发送密文</navigator>
+<navigator class="nav-bar" url="/pages/aes/encode/encode">发送密文</navigator>

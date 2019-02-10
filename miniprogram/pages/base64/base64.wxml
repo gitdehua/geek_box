@@ -9,8 +9,8 @@
     </view>
   </view>
   <view class="section control">
-    <button data-action="encode" form-type="submit" type="primary" size="mini">加密</button>
-    <button data-action="decode" form-type="submit" type="primary" size="mini">解密</button>
+    <button data-action="encode" form-type="submit" type="primary" size="mini">编码</button>
+    <button data-action="decode" form-type="submit" type="primary" size="mini">解码</button>
   </view>
 </form>
 <view class="section content" wx:if="{{result}}">

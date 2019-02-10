@@ -1,19 +1,19 @@
 <!--pages/index/index.wxml-->
 
 <view class="section">
-  <navigator class="item" url="/pages/number/number" hover-class="whenHover">进制转换</navigator>
+  <navigator class="item" url="/pages/number/number">进制转换</navigator>
 </view>
 
 <view class="section">
-  <navigator class="item" url="/pages/base64/base64" hover-class="whenHover">BASE64</navigator>
-  <navigator class="item" url="/pages/md5/md5" hover-class="whenHover">MD5</navigator>
+  <navigator class="item" url="/pages/base64/base64">BASE64</navigator>
+  <navigator class="item" url="/pages/md5/md5">MD5</navigator>
 </view>
 
 <view class="section">
-  <navigator class="item" url="/pages/dns/dns" hover-class="whenHover">DNS查询</navigator>
+  <navigator class="item" url="/pages/dns/dns">DNS查询</navigator>
 </view>
 
 <view class="section">
-  <navigator class="item" url="/pages/about/about" hover-class="whenHover">关于</navigator>
-  <button class="item" plain="true" open-type="share" hover-class="whenHover">分享</button>
+  <navigator class="item" url="/pages/about/about">关于</navigator>
+  <button class="item nav" plain="true" open-type="share">分享</button>
 </view>
