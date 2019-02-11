@@ -1,4 +1,5 @@
 <!--pages/aes/aes.wxml-->
+<nav-bar show-capsule='{{false}}' title="AES加密&解密"></nav-bar>
 <form bindsubmit="submit">
   <view class="section content">
     <view class="item-y">

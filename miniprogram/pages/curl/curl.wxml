@@ -1,4 +1,5 @@
 <!--pages/curl/curl.wxml-->
+<nav-bar show-capsule='{{false}}' title="cURL"></nav-bar>
 <form bindsubmit='submit'>
   <tabs class='section content'>
     <tab-bar>

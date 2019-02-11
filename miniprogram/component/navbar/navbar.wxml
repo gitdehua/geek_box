@@ -1,0 +1,9 @@
+<!--component/navbar/navbar.wxml-->
+<view style='height:{{height}}px'></view>
+<view class='nav-wrap' style='height:{{height}}px'>
+  <view class='nav-title'>{{title}}</view>
+  <view class='nav-capsule' wx:if='{{showCapsule}}'>
+    <navigator class='back' open-type='navigateBack' hover-class='none' wx:if='{{showBack}}'></navigator>
+    <navigator class='home' open-type='switchTab' hover-class='none' url='/pages/index/index'></navigator>
+  </view>
+</view>

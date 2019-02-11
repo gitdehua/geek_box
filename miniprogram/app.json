@@ -15,6 +15,7 @@
     "pages/test/test"
   ],
   "window": {
+    "navigationStyle":"custom",
     "backgroundColor": "#f8f8f8",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
@@ -23,7 +24,7 @@
   },
   "usingComponents": {
     "img": "/component/img/img",
-    "tab_bar":"/component/tab_bar/tab_bar"
+    "nav-bar": "/component/navbar/navbar"
   },
   "tabBar": {
     "color": "#777",

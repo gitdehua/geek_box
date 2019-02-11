@@ -1,4 +1,5 @@
 <!--pages/about/about.wxml-->
+<nav-bar title="关于"></nav-bar>
 <view class='section content'>
   <img src='https://www.dehuaio.com/geek_box.jpg' />
   <view class='info'>{{info}}</view>

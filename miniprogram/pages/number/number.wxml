@@ -1,4 +1,5 @@
 <!--pages/number/number.wxml-->
+<nav-bar title="进制转换"></nav-bar>
 <view class="section content">
   <view class="item">
     <view class="title">十进制</view>

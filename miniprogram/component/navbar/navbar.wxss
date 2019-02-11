@@ -1,0 +1,65 @@
+/* component/navbar/navbar.wxss */
+
+/* 顶部要固定定位   标题要居中   自定义按钮和标题要和右边微信原生的胶囊上下对齐 */
+
+.nav-wrap {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: #f6f6f6;
+  color: #000;
+  z-index: 9999999;
+}
+
+.nav-title {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100vw;
+  padding: 0 200rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.nav-capsule {
+  position: absolute;
+  bottom: 10px;
+  height: 32px;
+  margin-left: 30rpx;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  box-shadow: inset 0 0 1px 0 rgba(0, 0, 0, 0.31);
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.nav-capsule>navigator {
+  height: 22px;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 0 5px;
+  min-width: 22px;
+}
+
+.nav-capsule>navigator:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+
+.back::after {
+  content: "\3008";
+}
+
+.home::after {
+  font-family: "iconfont" !important;
+  color: var(--theme-color);
+  font-size: x-large;
+  content: "\e10e";
+}
