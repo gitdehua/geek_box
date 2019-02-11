@@ -18,6 +18,17 @@ Page({
   },
 
   submit: function(e) {
+    var userInfo = getApp().globalData.userInfo;
+    if (userInfo) {
+      this.setData({
+        userInfo: userInfo,
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/authorize/authorize?scope=userInfo',
+      });
+      return;
+    }
     wx.showLoading({
       title: "加密中",
       mask: true
@@ -53,8 +64,8 @@ Page({
 
   onShareAppMessage: function(res) {
     var data = {
-      title: '好友向你发送了一段密文',
-      path: `pages/aes/decode/decode?aes_id=${this.data.counterId}`,
+      title: `【加密内容】看看 ${this.data.userInfo.nickName} 说了什么`,
+      path: `pages/aes/decode/decode?aes_id=${this.data.counterId}&nickName=${this.data.userInfo.nickName}`,
       imageUrl: "https://www.dehuaio.com/encrypt.jpg"
     }
     return data;

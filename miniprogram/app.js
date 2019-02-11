@@ -1,31 +1,50 @@
 //app.js
 App({
-  onLaunch: function () {
-    
+  onLaunch: function() {
+
     wx.cloud.init({
       traceUser: true,
     });
 
-    const updateManager = wx.getUpdateManager()
-
-    updateManager.onCheckForUpdate(function (res) {
-      // 请求完新版本信息的回调
-      console.log("更新检测结果:", res.hasUpdate)
-    })
-
-    updateManager.onUpdateReady(function () {
-      // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
-      updateManager.applyUpdate()
+    wx.request({
+      url: 'https://www.dehuaio.com/api/GetClientIP.php',
+      method: 'GET',
+      success: function(res) {
+        console.log(res);
+        if (res.statusCode == 200) {
+          const db = wx.cloud.database();
+          db.collection('AppLaunchLog').add({
+            data: {
+              ip: res.data,
+              date: new Date()
+            }
+          })
+        }
+      },
     });
 
-    updateManager.onUpdateFailed(function () {
-      wx.showToast({
-        title: '更新失败 \n请检查网络',
-        mask: true
-      })
-      // 新的版本下载失败
-    })
+    this.globalData = {
+      userInfo: null
+    }
 
-    this.globalData = {}
+    wx.getSetting({
+      success(res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success(res) {
+              console.log(res.userInfo);
+              getApp().globalData.userInfo = res.userInfo
+            }
+          })
+        }
+      }
+    });
+  },
+
+  onPageNotFound(res) {
+    wx.switchTab({
+      url: 'pages/index/index'
+    })
   }
 })

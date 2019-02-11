@@ -1,0 +1,5 @@
+<!--pages/authorize/authorize.wxml-->
+<view class='section'>
+  <text>小程序需要你的部分信息(微信昵称)才能完成相关操作，请授权小程序</text>
+  <button open-type="getUserInfo" bindgetuserinfo='getuserinfo' type="primary">授权</button>
+</view>

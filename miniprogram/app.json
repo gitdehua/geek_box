@@ -11,6 +11,7 @@
     "pages/aes/ciphertext/manage",
     "pages/curl/curl",
     "pages/about/about",
+    "pages/authorize/authorize",
     "pages/test/test"
   ],
   "window": {

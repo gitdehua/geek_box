@@ -11,3 +11,6 @@
     <view class='data'>{{version}}</view>
   </view>
 </view>
+<view class='section'>
+  <button type="primary" bindtap='update'>检查更新</button>
+</view>
