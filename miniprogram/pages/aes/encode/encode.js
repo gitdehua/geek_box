@@ -63,12 +63,11 @@ Page({
   },
 
   onShareAppMessage: function(res) {
-    var data = {
-      title: `【加密内容】看看 ${this.data.userInfo.nickName} 说了什么`,
-      path: `pages/aes/decode/decode?aes_id=${this.data.counterId}&nickName=${this.data.userInfo.nickName}`,
+    return {
+      title: `【加密内容】看看 ${getApp().globalData.userInfo.nickName} 说了什么`,
+      path: `pages/aes/decode/decode?aes_id=${this.data.counterId}`,
       imageUrl: "https://www.dehuaio.com/encrypt.jpg"
     }
-    return data;
   },
 
   copy: function() {

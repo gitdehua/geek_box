@@ -14,6 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    this.setData(options);
     wx.showLoading({
       title: "查询密文",
     })
@@ -68,5 +69,17 @@ Page({
     this.setData({
       result
     });
+  },
+
+  onShareAppMessage: function() {
+    var nickName = "好友";
+    try {
+      nickName = getApp().globalData.userInfo.nickName;
+    } catch (e) {}
+    return {
+      title: `【加密内容】看看 ${nickName} 说了什么`,
+      path: `pages/aes/decode/decode?aes_id=${this.data.counterId}`,
+      imageUrl: "https://www.dehuaio.com/encrypt.jpg"
+    }
   }
 })
