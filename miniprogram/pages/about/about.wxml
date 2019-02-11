@@ -7,11 +7,11 @@
     <view class='title'>appid</view>
     <view class='data'>{{appid}}</view>
   </view>
-  <view class='item'>
-    <view class='title'>版本</view>
-    <view class='data'>{{version}}</view>
-  </view>
 </view>
 <view class='section'>
   <button type="primary" bindtap='update'>检查更新</button>
+</view>
+<view class="section control">
+  <button open-type="feedback" type="primary" size="mini">意见反馈</button>
+  <button open-type="contact" type="primary" size="mini">联系开发者</button>
 </view>
