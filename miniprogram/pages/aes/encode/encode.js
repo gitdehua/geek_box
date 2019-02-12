@@ -36,6 +36,13 @@ Page({
     var result,
       content = e.detail.value.content,
       key = e.detail.value.key;
+    if (content == "" || key == "") {
+      wx.showToast({
+        title: '内容或密钥不能为空',
+        icon: "none"
+      });
+      return;
+    }
     result = CryptoJS.AES.encrypt(content, key).toString()
     const db = wx.cloud.database();
     db.collection('aes').add({
@@ -46,7 +53,7 @@ Page({
       },
       success: res => {
         this.setData({
-          counterId: res._id,
+          aes_id: res._id,
           result
         });
         console.log('新增记录成功，记录 _id: ', res._id);
@@ -65,7 +72,7 @@ Page({
   onShareAppMessage: function(res) {
     return {
       title: `【加密内容】看看 ${getApp().globalData.userInfo.nickName} 说了什么`,
-      path: `pages/aes/decode/decode?aes_id=${this.data.counterId}`,
+      path: `pages/aes/decode/decode?aes_id=${this.data.aes_id}`,
       imageUrl: "https://www.dehuaio.com/encrypt.jpg"
     }
   },

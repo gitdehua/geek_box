@@ -78,7 +78,7 @@ Page({
     } catch (e) {}
     return {
       title: `【加密内容】看看 ${nickName} 说了什么`,
-      path: `pages/aes/decode/decode?aes_id=${this.data.counterId}`,
+      path: `pages/aes/decode/decode?aes_id=${this.data.aes_id}`,
       imageUrl: "https://www.dehuaio.com/encrypt.jpg"
     }
   }

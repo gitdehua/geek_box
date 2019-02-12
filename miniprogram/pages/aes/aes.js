@@ -14,6 +14,13 @@ Page({
     var result = "",
       content = e.detail.value.content,
       key = e.detail.value.key;
+    if (content == "" || key == "") {
+      wx.showToast({
+        title: '内容或密钥不能为空',
+        icon: "none"
+      });
+      return;
+    }
     if (e.detail.target.dataset.action == "encode") {
       result = CryptoJS.AES.encrypt(content, key).toString()
     } else {
