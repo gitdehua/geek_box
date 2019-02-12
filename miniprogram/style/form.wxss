@@ -30,7 +30,7 @@ textarea {
 
 .title>.copy::before {
   font-family: "iconfont" !important;
-  content: "\e110";
+  content: "\e00d";
   color: var(--theme-color);
   font-size: larger;
   width: 2em;

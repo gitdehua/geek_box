@@ -40,7 +40,7 @@
 
 [class*=card]>.header>.right::before {
   font-family: "iconfont" !important;
-  content: "\e110";
+  content: "\e00d";
   color: #e64340;
   font-size: larger;
 }

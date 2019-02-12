@@ -8,14 +8,14 @@ picker.afterIcon::after {
   position: absolute;
   top: 0;
   right: 0;
-  content: "\e106";
+  content: "\e006";
   color: #aaa;
   font-size: smaller;
   z-index: -1;
 }
 
 picker.afterIcon[mode="date"]::after {
-  content: "\e105";
+  content: "\e004";
   color: var(--theme-color);
   font-size: inherit;
 }

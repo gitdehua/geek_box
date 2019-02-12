@@ -41,12 +41,12 @@ tab.headers>.item>.title {
   white-space: nowrap;
 }
 
-.fonticon_e108::before {
-  content: "\e108";
+.fonticon_e008::before {
+  content: "\e008";
   color: #e64340;
 }
 
-.fonticon_e112::before {
-  content: "\e112" !important;
+.fonticon_e00f::before {
+  content: "\e00f" !important;
   color: #666 !important;
 }

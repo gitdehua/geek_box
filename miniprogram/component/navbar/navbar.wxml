@@ -3,7 +3,6 @@
 <view class='nav-wrap' style='height:{{height}}px'>
   <view class='nav-title'>{{title}}</view>
   <view class='nav-capsule' wx:if='{{showCapsule}}'>
-    <navigator class='back' open-type='navigateBack' hover-class='none' wx:if='{{showBack}}'></navigator>
-    <navigator class='home' open-type='switchTab' hover-class='none' url='/pages/index/index'></navigator>
+    <navigator wx:for='{{navs}}' wx:key='item' wx:if='{{item.show&&item.text!=""}}' open-type='{{item.type}}' style='color:{{item.color}};' hover-class='none' url='{{item.url}}'>{{item.text}}</navigator>
   </view>
 </view>

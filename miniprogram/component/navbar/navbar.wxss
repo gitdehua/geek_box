@@ -30,8 +30,8 @@
   position: absolute;
   bottom: 10px;
   height: 32px;
-  margin-left: 30rpx;
-  padding: 5px;
+  margin-left: 10px;
+  padding: 5px 2px;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 16px;
@@ -43,23 +43,14 @@
 
 .nav-capsule>navigator {
   height: 22px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 22px;
-  padding: 0 5px;
+  padding: 0 2px;
   min-width: 22px;
+  font-family: "iconfont" !important;
+  text-align: center;
 }
 
 .nav-capsule>navigator:not(:last-child) {
   border-right: 1px solid #ddd;
-}
-
-.back::after {
-  content: "\3008";
-}
-
-.home::after {
-  font-family: "iconfont" !important;
-  color: var(--theme-color);
-  font-size: x-large;
-  content: "\e10e";
 }

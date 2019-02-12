@@ -63,7 +63,7 @@
       <view wx:key class='item' wx:for='{{headers}}'>
         <view class='title'>{{index}}</view>
         <view class='data'>{{item}}</view>
-        <view class='fonticon_e108' data-key='{{index}}' bindtap='remove_header'></view>
+        <view class='fonticon_e008' data-key='{{index}}' bindtap='remove_header'></view>
       </view>
       <view class="section control">
         <button size="mini" bindtap='add_header'>添加</button>
@@ -82,7 +82,7 @@
   <view class="card">
     <view class="header">
       <text>请输入</text>
-      <text bindtap="save_header" class="right fonticon_e112"></text>
+      <text bindtap="save_header" class="right fonticon_e00f"></text>
     </view>
     <view class="content">
       <view class="item">
