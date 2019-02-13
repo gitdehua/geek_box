@@ -76,11 +76,8 @@ view.textarea {
   overflow-y: auto;
 }
 
-navigator.button {
+navigator.btn {
   flex: 1;
-  line-height: 2.3;
-  font-size: 13px;
-  padding: 0 1.34em;
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid #ddd;
@@ -88,6 +85,19 @@ navigator.button {
   overflow: hidden;
   color: #000;
   background-color: #f8f8f8;
+  display: block;
+  padding-left: 14px;
+  padding-right: 14px;
+  font-size: 18px;
+  text-decoration: none;
+  line-height: 2.55555556;
+}
+
+navigator.btn.mini {
+  display: inline-block;
+  line-height: 2.3;
+  font-size: 13px;
+  padding: 0 1.34em;
 }
 
 button.nav {

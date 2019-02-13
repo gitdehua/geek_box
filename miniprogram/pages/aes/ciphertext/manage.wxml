@@ -17,7 +17,7 @@
     <view class='data'>{{item.count}}</view>
   </view>
   <view class='control'>
-    <navigator class="button" url="/pages/aes/decode/decode?aes_id={{item._id}}">查看</navigator>
+    <navigator class="btn mini" url="/pages/aes/decode/decode?aes_id={{item._id}}">查看</navigator>
     <button data-aes-id='{{item._id}}' size='mini' bindtap='onRemove'>删除</button>
   </view>
 </view>

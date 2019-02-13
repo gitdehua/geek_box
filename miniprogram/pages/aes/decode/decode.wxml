@@ -27,6 +27,9 @@
     </view>
   </view>
 </view>
-<navigator class="navigator" url="/pages/aes/encode/encode">创建一个并发送</navigator>
+
+<view class="section">
+  <navigator class="btn" url="/pages/aes/encode/encode">给好友发送密文</navigator>
+</view>
 
 <tab_bar />

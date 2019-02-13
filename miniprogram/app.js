@@ -1,31 +1,10 @@
 //app.js
 App({
+  globalData: {},
+
   onLaunch: function() {
 
-    wx.cloud.init({
-      traceUser: true,
-    });
-
-    wx.request({
-      url: 'https://www.dehuaio.com/api/GetClientIP.php',
-      method: 'GET',
-      success: function(res) {
-        console.log(res);
-        if (res.statusCode == 200) {
-          const db = wx.cloud.database();
-          db.collection('AppLaunchLog').add({
-            data: {
-              ip: res.data,
-              date: new Date()
-            }
-          })
-        }
-      },
-    });
-
-    this.globalData = {
-      userInfo: null
-    }
+    wx.cloud.init();
 
     wx.getSetting({
       success(res) {
