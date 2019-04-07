@@ -1,0 +1,17 @@
+/* pages/authorize/webAuth.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.section{
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.code {
+  font-size: 10vw;
+  font-weight: 900;
+  color: var(--theme-color);
+  text-align: center;
+}

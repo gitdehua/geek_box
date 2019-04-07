@@ -12,6 +12,7 @@
     "pages/curl/curl",
     "pages/about/about",
     "pages/authorize/authorize",
+    "pages/authorize/webAuth",
     "pages/test/test"
   ],
   "window": {

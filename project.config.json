@@ -6,13 +6,11 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true,
-		"autoAudits": false
+		"newFeature": true
 	},
-	"appid": "wx684dbb6844c8943a",
+	"appid": "wx05e2e4dade4a9b04",
 	"projectname": "geek_box",
-	"libVersion": "2.5.0",
-	"compileType": "miniprogram",
+	"libVersion": "2.2.5",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -30,19 +28,13 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide",
-					"query": ""
-				},
-				{
-					"id": 1,
+					"id": 0,
 					"name": "test",
 					"pathName": "pages/test/test",
-					"query": "aes_id=XE2Mc97E7L4woJgr",
+					"query": "",
 					"scene": null
 				}
 			]

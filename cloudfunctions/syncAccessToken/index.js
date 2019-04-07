@@ -8,8 +8,8 @@ const db = cloud.database();
 
 // 云函数入口函数
 exports.main = async(event, context) => new Promise((resolve, reject) => {
-  var appid = "wx684dbb6844c8943a";
-  var secret = "4ba300e73cb68eb1c269a3bb17568e8b";
+  var appid = "wx05e2e4dade4a9b04";
+  var secret = "5630052487f02952c44a5d64424252fd";
   var url = `https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${appid}&secret=${secret}`;
 
   request(url, function(error, response, body) {

@@ -26,8 +26,8 @@
 
 .nav-capsule {
   position: absolute;
-  bottom: 10px;
-  height: 32px;
+  bottom: 12px;
+  height: 28px;
   margin-left: 10px;
   padding: 5px 2px;
   box-sizing: border-box;
@@ -40,11 +40,11 @@
 }
 
 .nav-capsule>navigator {
-  height: 22px;
-  font-size: 18px;
-  line-height: 22px;
+  height: 15px;
+  font-size: 14px;
+  line-height: 15px;
   padding: 0 2px;
-  min-width: 22px;
+  min-width: 26px;
   font-family: "iconfont" !important;
   text-align: center;
 }
