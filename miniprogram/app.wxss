@@ -10,8 +10,11 @@ page {
   --theme-color: #f70;
 }
 
-[class*=fonticon]::before {
+.fonticon, [class*=fonticon]::before {
   font-family: "iconfont" !important;
+}
+
+[class*=fonticon]::before {
   color: var(--theme-color);
   font-size: larger;
 }

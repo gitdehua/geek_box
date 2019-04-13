@@ -1,0 +1,55 @@
+/* my_works/course/pages/courses/list.wxss */
+
+.filter {
+  background-color: #f70;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 160rpx;
+  right: 60rpx;
+  width: 100rpx;
+  height: 100rpx;
+  z-index: 100;
+}
+
+.filter i::after {
+  font-family: "iconfont" !important;
+  content: "\e012";
+  display: block;
+  height: 100rpx;
+  color: #fff;
+  font-size: 50rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.card>.header {
+  border-bottom: 1px solid #f90;
+}
+
+.header>.delete {
+  float: right;
+  margin-right: 5px;
+}
+
+.header>.delete::before {
+  font-family: "iconfont" !important;
+  content: "\e008";
+  color: #e64340;
+  font-size: larger;
+  width: 2em;
+  height: 3em;
+}
+
+.content>.item:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.control>.edit {
+  background-color: #f70;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  line-height: 2.5em;
+  font-size: 13px;
+}

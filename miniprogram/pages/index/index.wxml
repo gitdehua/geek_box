@@ -13,6 +13,9 @@
 <view class="section">
   <navigator class="item" url="/pages/dns/dns">DNS查询</navigator>
 </view>
+<view class="section">
+  <navigator class="item" url="/my_works/course/pages/show/daily">课程表</navigator>
+</view>
 
 <view class="section">
   <navigator class="item" url="/pages/about/about">关于</navigator>

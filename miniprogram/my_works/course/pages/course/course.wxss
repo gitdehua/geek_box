@@ -1,0 +1,49 @@
+/* my_works/course/pages/course/course.wxss */
+
+.section{
+  padding: 0 15px;
+  background-color: #fff;
+}
+
+.section>.header {
+  border-bottom: 1px solid #f90;
+  height: 3em;
+  line-height: 3em;
+}
+
+.item>.title{
+  display: block !important;
+}
+
+.item>.data{
+  position: relative;
+}
+
+.item>.title>icon{
+  margin: 0 5px;
+}
+
+.data>navigator {
+  color: #fff;
+  font-size: 0.8em;
+  background-color: #f70;
+  margin: 1em;
+  height: 2em;
+  line-height: 2em;
+  padding: 0 1em;
+  border-radius: 1em;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav>.item {
+  display: block;
+  background-color: transparent !important;
+}
+
+.nav>.item::after {
+  content: "\3009";
+  float: right;
+  color: #bbb;
+}

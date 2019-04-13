@@ -1,0 +1,10 @@
+/* my_works/course/pages/config/setDate.wxss */
+.description {
+    color: #666;
+    margin: 10px auto;
+    padding: 0 15px;
+}
+
+.content{
+  padding: 0 15px;
+}

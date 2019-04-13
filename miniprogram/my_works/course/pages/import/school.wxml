@@ -1,0 +1,35 @@
+<!--my_works/course/pages/import/school.wxml-->
+<nav-bar title="在线导入"></nav-bar>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section content">
+    <view class="item">
+      <view class="title">学号</view>
+      <view class="data">
+        <input name="stuId" maxlength="20" placeholder="学号" />
+      </view>
+    </view>
+    <view class="item">
+      <view class="title">密码</view>
+      <view class="data">
+        <input name="pass" maxlength="30" password="true" placeholder="密码" />
+      </view>
+    </view>
+    <view class="item inlineInput">
+      <view class="title">验证码</view>
+      <view class="data" style="display:flex;">
+        <input maxlength="4" name="checkCode" placeholder="验证码" />
+        <image bindtap="flush" mode="aspectFit" style="height:80%;width:5em;margin:auto 0;" src="{{checkCode||'/my_works/course/images/lodding.svg'}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="btn-area">
+    <button type="primary" formType="submit" disabled="{{step.length!=0}}" loading="{{step.length!=0}}">确定</button>
+  </view>
+</form>
+
+<view class='step'>
+  <view wx:key="" class='item' wx:for="{{step}}">{{item}}</view>
+</view>
+
+<view style="color:#f22;font-size:26rpx;margin:0 15rpx;">*只支持四川托普学院</view>

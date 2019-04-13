@@ -1,0 +1,85 @@
+<!--my_works/course/pages/courses/list.wxml-->
+<nav-bar title="课程数据"></nav-bar>
+
+<view class="filter">
+  <picker class="picker" bindchange="bindPickerChange" value="{{filter}}" range="{{subjects}}" range-key="subject">
+    <i></i>
+  </picker>
+</view>
+
+<template name="courseList">
+  <view class="card" wx:if="{{pickerData==subjectId||pickerData==null}}">
+    <view class="header">
+      <text>{{subject}}</text>
+      <text bindtap="deleteData" data-index="{{id}}" class="delete"></text>
+    </view>
+    <view class="content">
+      <view class="item">
+        <view class="title">日期</view>
+        <view class="data">第{{start}}周 - 第{{end}}周</view>
+      </view>
+      <view class="item">
+        <view class="title">重复</view>
+        <view class="data">{{condition==3?"每周":(condition==0?"双周":"单周")}}</view>
+      </view>
+      <view class="item">
+        <view class="title">时间</view>
+        <view class="data">{{tool.weekFormatting(dayInWeek)}} 第{{courseTime}}节-第{{courseTime*1+timeLength*1-1}}节</view>
+      </view>
+      <view class="item">
+        <view class="title">地点</view>
+        <view class="data">{{locale}}</view>
+      </view>
+    </view>
+    <view class="control">
+      <view class="edit" bindtap="navigateTo" data-index="{{id}}">编辑</view>
+    </view>
+  </view>
+</template>
+
+<block wx:key="" wx:for-index="i" wx:for="{{courses}}">
+  <template is="courseList" data="{{...courses[i],id:i,pickerData:subjects[filter].subjectId,subject:tool.getSubjectInfo(subjects,courses[i].subjectId)}}" />
+</block>
+
+<wxs module="tool">
+  function weekFormatting(day) {
+    var str = null;
+    switch (parseInt(day)) {
+      case 0:
+        str = "日";
+        break;
+      case 1:
+        str = "一";
+        break;
+      case 2:
+        str = "二";
+        break;
+      case 3:
+        str = "三";
+        break;
+      case 4:
+        str = "四";
+        break;
+      case 5:
+        str = "五";
+        break;
+      case 6:
+        str = "六";
+        break;
+    }
+    return "星期" + str;
+  }
+
+  function getSubjectInfo(array, id) {
+    for (var i = 0; i < array.length; i++) {
+      if (array[i].subjectId == id) {
+        return array[i].subject;
+      }
+    }
+  }
+
+  module.exports = {
+    weekFormatting: weekFormatting,
+    getSubjectInfo: getSubjectInfo
+  };
+</wxs>

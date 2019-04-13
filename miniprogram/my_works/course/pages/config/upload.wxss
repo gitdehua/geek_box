@@ -1,0 +1,14 @@
+/* pages/course/upload/upload.wxss */
+
+.section {
+  padding: 0 15px;
+}
+
+.content>.item>.data>input {
+  height: 100%;
+  width: 100%;
+}
+
+.control>button {
+  margin: 10px 0;
+}

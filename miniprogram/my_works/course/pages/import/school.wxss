@@ -1,0 +1,65 @@
+/* my_works/course/pages/import/school.wxss */
+
+.step {
+  color: #aaa;
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+
+.step>.item::before {
+  content: "\2714";
+  color: #5e6;
+}
+
+.step>.item:last-child::before {
+  font-family: "iconfont" !important;
+  content: "\e10a";
+  color: #aaa;
+  display: inline-block;
+  animation: rotate 2s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.section {
+  background-color: #fff;
+  padding: 0 15px;
+}
+
+.content>.item>.title {
+  width: 160rpx;
+}
+
+.content>.item input {
+  line-height: 100%;
+  height: 100%;
+}
+
+.content>.item input::after {
+  content: " ";
+  display: block;
+  border-top: 1px solid #f90;
+  margin-top: -0.6em;
+}
+
+.inlineInput>.data {
+  display: flex;
+}
+
+.inlineInput>.data>input {
+  width: 6em;
+  margin-right: 0.5em;
+}
+
+.btn-area {
+  padding: 15px;
+}

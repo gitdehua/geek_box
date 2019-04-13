@@ -1,0 +1,6 @@
+{
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "msg-box": "/my_works/course/components/msg-box/msg-box"
+  }
+}

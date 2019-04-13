@@ -1,0 +1,11 @@
+<!--components/msg-box/msg-box.wxml-->
+<view class='grid' wx:if="{{show}}">
+  <view class='box'>
+    <view class='title'>{{title}}</view>
+    <view class='content'>{{content}}</view>
+    <view class='control'>
+      <view class='cancel' data-type='cancel' bindtap='click' hover-class="whenHover">取消</view>
+      <view class='confirm' data-type='confirm' bindtap='click' hover-class="whenHover">确认</view>
+    </view>
+  </view>
+</view>

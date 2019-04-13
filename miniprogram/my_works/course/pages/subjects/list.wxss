@@ -1,0 +1,41 @@
+/* my_works/course/pages/subjects/list.wxss */
+
+.card>.header {
+  height: 3em;
+  line-height: 3em;
+  border-bottom: 1px solid #f90;
+  position: relative;
+  padding-left: 0.8em;
+}
+
+.header>.delete {
+  float: right;
+  margin-right: 5px;
+}
+
+.header>.delete::before {
+  font-family: "iconfont" !important;
+  content: "\e008";
+  color: #e64340;
+  font-size: larger;
+  width: 2em;
+  height: 3em;
+}
+
+.content>.item:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.content>.item>.title {
+  width: 160rpx;
+}
+
+.control>.edit {
+  background-color: #f70;
+  margin: 5px 0;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  line-height: 2.5em;
+  font-size: 13px;
+}

@@ -1,0 +1,117 @@
+/* my_works/course/pages/show/daily.wxss */
+
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.flex-top {
+  position: relative;
+  height: 0px !important;
+}
+
+.flex-body {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 3em;
+}
+
+.pickerGrid {
+  padding: 0 15px;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.card-full>.header {
+  border-bottom: 1px solid #f70;
+}
+
+.card-full>.content>.item {
+  border-bottom: 1rpx dashed #f90;
+  font-size: 30rpx;
+}
+
+.content>.item>.title {
+  width: 240rpx;
+}
+
+.content>.item>.data {
+  text-overflow: ellipsis;
+}
+
+.card-full .item>.title::before {
+  font-family: "iconfont" !important;
+  color: #f70;
+  font-size: smaller;
+  width: 1.5em;
+}
+
+.course::before {
+  content: "\e002";
+}
+
+.teacher::before {
+  content: "\e003";
+}
+
+.locale::before {
+  content: "\e001";
+}
+
+.db_error::before {
+  font-family: "iconfont" !important;
+  content: "\e00c";
+  font-size: 20vw;
+  color: #e64340;
+}
+
+.db_error.null::before {
+  content: "\1F389";
+  /*content: "\1F44D";*/
+}
+
+.db_error {
+  position: fixed;
+  top: 50%;
+  display: block;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  font-size: smaller;
+  color: #aaa;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 8px;
+}
+
+.menu>navigator {
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+  margin: 4rpx;
+}
+
+.menu [class*=fonticon_]::before {
+  display: block;
+  font-size: 38rpx;
+}
+
+.menu .fonticon_e00a::before {
+  content: "\e00a";
+}
+
+.menu .fonticon_e005::before {
+  content: "\e005";
+}
+
+.close {
+  color: #ddd;
+  padding: 0 15px;
+}

@@ -1,0 +1,22 @@
+<!--my_works/course/pages/subjects/edit.wxml-->
+<nav-bar title="科目编辑"></nav-bar>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section content">
+    <view class="item">
+      <view class="title">科目名</view>
+      <view class="data">
+        <input name="subject" maxlength="30" placeholder="30字以内" value="{{subjectInfo.subject}}" />
+      </view>
+    </view>
+    <view class="item">
+      <view class="title">老师</view>
+      <view class="data">
+        <input name="teacher" maxlength="10" placeholder="10字以内" value="{{subjectInfo.teacher}}" />
+      </view>
+    </view>
+  </view>
+  <view class="btn-area">
+    <button type="primary" formType="submit">保存</button>
+  </view>
+</form>

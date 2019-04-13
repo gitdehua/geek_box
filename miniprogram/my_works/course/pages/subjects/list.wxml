@@ -1,0 +1,28 @@
+<!--my_works/course/pages/subjects/list.wxml-->
+<nav-bar title="科目数据"></nav-bar>
+
+<template name="list">
+  <view class="card">
+    <view class="header">
+      <text>科目信息</text>
+      <text bindtap="deleteData" data-index="{{id}}" class="delete"></text>
+    </view>
+    <view class="content">
+      <view class="item">
+        <view class="title">科目</view>
+        <view class="data">{{subject}}</view>
+      </view>
+      <view class="item">
+        <view class="title">老师</view>
+        <view class="data">{{teacher}}</view>
+      </view>
+    </view>
+    <view class="control">
+      <view class="edit" bindtap="navigateTo" data-index="{{id}}">编辑</view>
+    </view>
+  </view>
+</template>
+
+<block wx:key="" wx:for-index="i" wx:for="{{subjects}}">
+  <template is="list" data="{{...subjects[i],id:i}}" />
+</block>

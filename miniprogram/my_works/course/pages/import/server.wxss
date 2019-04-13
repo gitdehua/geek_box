@@ -1,0 +1,5 @@
+/* my_works/course/pages/import/server.wxss */
+
+.section {
+  padding: 0 15px;
+}

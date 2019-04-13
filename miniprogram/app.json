@@ -16,9 +16,9 @@
     "pages/test/test"
   ],
   "window": {
-    "navigationStyle":"custom",
+    "navigationStyle": "custom",
     "backgroundColor": "#f8f8f8",
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "极客宝箱",
     "navigationBarTextStyle": "black"
@@ -52,5 +52,23 @@
         "text": "cURL"
       }
     ]
-  }
+  },
+  "subpackages": [
+    {
+      "root": "my_works/course",
+      "pages": [
+        "pages/course/course",
+        "pages/show/weekly",
+        "pages/show/daily",
+        "pages/courses/edit",
+        "pages/courses/list",
+        "pages/subjects/edit",
+        "pages/subjects/list",
+        "pages/config/setDate",
+        "pages/config/upload",
+        "pages/import/server",
+        "pages/import/school"
+      ]
+    }
+  ]
 }
