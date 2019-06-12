@@ -70,5 +70,6 @@
         "pages/import/school"
       ]
     }
-  ]
+  ],
+  "sitemapLocation": "sitemap.json"
 }

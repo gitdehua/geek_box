@@ -1,20 +1,7 @@
 /* my_works/course/pages/show/daily.wxss */
 
 page {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.flex-top {
-  position: relative;
-  height: 0px !important;
-}
-
-.flex-body {
-  flex: 1;
-  overflow-y: auto;
-  margin-top: 3em;
+  min-height: calc(100vh + 1px);
 }
 
 .pickerGrid {
@@ -64,6 +51,7 @@ page {
   content: "\e00c";
   font-size: 20vw;
   color: #e64340;
+  line-height: 100%;
 }
 
 .db_error.null::before {
@@ -72,14 +60,12 @@ page {
 }
 
 .db_error {
-  position: fixed;
-  top: 50%;
-  display: block;
-  width: 100%;
+  height: 60vh;
   text-align: center;
-  transform: translateY(-50%);
-  font-size: smaller;
   color: #aaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .menu {
@@ -114,4 +100,24 @@ page {
 .close {
   color: #ddd;
   padding: 0 15px;
+}
+
+.pull-up {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.pull-up>.msg {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  font-size: x-small;
+  padding: .5em;
+  border-radius: 1em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
 }

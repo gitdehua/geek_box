@@ -29,7 +29,7 @@ exports.main = async(event, context) => new Promise((resolve, reject) => {
         _id: "XLB5aYnnuWjci1BP"
       }).update({
         data: {
-          data: result[0].data,
+          data: result[0].content,
           time: result[0].date.getTime()
         }
       }).then(function(res) {

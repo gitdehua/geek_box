@@ -6,3 +6,6 @@
     <navigator wx:for='{{navs}}' wx:key='item' wx:if='{{item.show&&item.text!=""}}' open-type='{{item.type}}' style='color:{{item.color}};' hover-class='none' url='{{item.url}}'>{{item.text}}</navigator>
   </view>
 </view>
+<view style='position: fixed;left:0;top:{{height}}px;z-index:100;'>
+  <slot></slot>
+</view>

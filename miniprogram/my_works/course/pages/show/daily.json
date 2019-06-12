@@ -1,5 +1,6 @@
 {
   "enablePullDownRefresh": true,
+  "onReachBottomDistance": 1,
   "usingComponents": {
     "msg-box": "/my_works/course/components/msg-box/msg-box"
   }

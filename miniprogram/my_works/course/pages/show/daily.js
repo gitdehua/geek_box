@@ -7,7 +7,6 @@ Page({
     weekString: null,
     date: null,
     courseList: null,
-    touchEnd: "touchEnd",
     touchX: null,
     touchY: null,
     nav: {
@@ -18,7 +17,9 @@ Page({
       text: "\ue00a"
     },
     close: "\ue00f",
-    flush: "\ue009"
+    flush: "\ue009",
+    pullUpMsg: ["上拉查看一周课表", "松开跳转"],
+    pullUpMsgId: 0
   },
 
   bindDateChange: function(e) {
@@ -191,5 +192,54 @@ Page({
     this.setData({
       courseList
     });
+  },
+
+  onReachBottom: function() {
+    this.setData({
+      pullUp: true,
+      pullUpMsgHeigh: 0
+    });
+  },
+
+  pullUp: function(e) {
+    switch (e.type) {
+      case "touchstart":
+        {
+          console.log(e);
+          this.setData({
+            startY: e.changedTouches[0].clientY
+          });
+        }
+        break;
+      case "touchend":
+        {
+          console.log(e);
+          if (this.data.pullUpMsgId == 1) {
+            wx.navigateTo({
+              url: '/my_works/course/pages/show/weekly',
+            });
+            wx.pageScrollTo({
+              scrollTop: 0
+            });
+          }
+          this.setData({
+            pullUpMsgHeigh: 0,
+            pullUpMsgId: 0,
+            pullUp: false
+          });
+        }
+        break;
+      case "touchmove":
+        {
+          var startY = this.data["startY"];
+          var pullUpMsgHeigh = (startY - e.changedTouches[0].clientY) / 2;
+          var pullUpMsgId = pullUpMsgHeigh > 50 ? 1 : 0;
+          this.setData({
+            pullUpMsgHeigh,
+            pullUpMsgId
+          });
+        }
+        break;
+    }
   }
 })
