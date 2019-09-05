@@ -2,6 +2,7 @@
 @import "style/default.wxss";
 @import "style/iconfont.wxss";
 @import "style/layout.wxss";
+@import './component/weui-wxss/dist/style/weui.wxss';
 
 page {
   background-color: #f8f8f8;
