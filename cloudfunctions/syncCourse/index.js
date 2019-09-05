@@ -10,11 +10,11 @@ const _ = db.command
 exports.main = async(event, context) => new Promise((resolve, reject) => {
   try {
     var connection = mysql.createConnection({
-      host: process.env.db_host,
-      user: process.env.db_user,
-      password: process.env.db_password,
-      database: process.env.db_database,
-      timezone: '+08:00'
+      host: process.env.dbHost,
+      user: process.env.dbUser,
+      password: process.env.dbPassword,
+      database: process.env.dbDatabase,
+      timezone: '-06:00'
     });
 
     connection.connect();

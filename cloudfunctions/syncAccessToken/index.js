@@ -1,7 +1,6 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk');
 var request = require('request');
-var mysql = require('mysql');
 
 cloud.init();
 const db = cloud.database();
@@ -15,34 +14,13 @@ exports.main = async(event, context) => new Promise((resolve, reject) => {
       console.log(body) // 请求成功的处理逻辑
       try {
         body = JSON.parse(body);
-        var connection = mysql.createConnection({
-          host: process.env.db_host,
-          user: process.env.db_user,
-          password: process.env.db_password,
-          database: process.env.db_database
-        });
-
-        connection.connect();
-
-        var modSql = "UPDATE `wxapp` SET `value` = ?, `update_time` = NOW() WHERE `key` = 'accessToken';";
-        var modSqlParams = [body.access_token];
-        
-        connection.query(modSql, modSqlParams, function(err, result) {
-          if (err) {
-            reject('[UPDATE ERROR] - ', err.message);
-            return;
+        db.collection('app_config').doc('AccessToken').update({
+          data: {
+            value: body.access_token
           }
-          console.log('--------------------------UPDATE----------------------------');
-          console.log('UPDATE affectedRows', result.affectedRows);
-          console.log('-----------------------------------------------------------------\n\n');
-          db.collection('app_config').doc('AccessToken').update({
-            data: {
-              value: body.access_token
-            }
-          }).then(function() {
-            resolve(body);
-          })
-        });
+        }).then(function () {
+          resolve(body);
+        })
       } catch (e) {
         reject(e);
       }

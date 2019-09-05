@@ -2,7 +2,6 @@ const cloud = require('wx-server-sdk')
 cloud.init();
 const db = cloud.database();
 
-
 Date.prototype.getTimezone = function() {
   var offset = this.getTimezoneOffset();
   var mark = offset < 0 ? "+" : "-";
