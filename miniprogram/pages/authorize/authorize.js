@@ -8,15 +8,19 @@ Page({
 
   },
 
-  getuserinfo: function(e) {
+  getUserInfo: function(e) {
     console.log(e);
     getApp().globalData.userInfo = e.detail.userInfo;
+    wx.setStorage({
+      key: 'user_info',
+      data: e.detail.userInfo,
+    })
     wx.navigateBack({
       delta: 1
     })
   },
 
-  cancel:function(){
+  cancel: function() {
     wx.navigateBack({
       delta: 2,
     })

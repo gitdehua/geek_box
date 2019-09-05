@@ -1,12 +1,27 @@
 //app.js
 import "./utils/init.js";
+class GlobalData {
+  userInfo;
+  getUserInfo() {
+    if (this.userInfo) {
+      return this.userInfo;
+    } else {
+      wx.navigateTo({
+        url: '/pages/authorize/authorize?scope=userInfo',
+      });
+      return;
+    }
+  }
+}
 
 App({
-  globalData: {},
+  globalData: new GlobalData(),
 
   onLaunch: function() {
 
     wx.cloud.init();
+
+    getUserInfo();
 
     // 获取主机
     getAppHost();
@@ -19,7 +34,16 @@ App({
       url: 'pages/index/index'
     })
   }
-})
+});
+
+function getUserInfo() {
+  wx.getStorage({
+    key: 'user_info',
+    success: function(res) {
+      getApp().globalData.userInfo = res.data;
+    }
+  })
+}
 
 function syncCourse() {
   wx.getStorage({

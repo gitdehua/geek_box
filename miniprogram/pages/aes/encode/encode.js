@@ -18,15 +18,12 @@ Page({
   },
 
   submit: function(e) {
-    var userInfo = getApp().globalData.userInfo;
+    var userInfo = getApp().globalData.getUserInfo();
     if (userInfo) {
       this.setData({
         userInfo: userInfo,
       })
     } else {
-      wx.navigateTo({
-        url: '/pages/authorize/authorize?scope=userInfo',
-      });
       return;
     }
     wx.showLoading({
