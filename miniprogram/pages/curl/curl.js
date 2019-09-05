@@ -1,7 +1,6 @@
 // pages/curl/curl.js
 var CryptoJS = require('../../utils/crypto-js.min');
-var host = require('../../utils/util').host;
-// var host = "https://local.dehuaio.com";
+const host = getApp().globalData.host
 
 Page({
 

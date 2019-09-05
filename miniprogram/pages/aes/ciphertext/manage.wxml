@@ -1,6 +1,6 @@
 <!--pages/aes/ciphertext/manage.wxml-->
 <nav-bar title="密文管理"></nav-bar>
-<wxs src='../../../utils/util.wxs' module='util' />
+
 <view wx:for='{{result}}' wx:key='' class='section content'>
   <view class='item-y'>
     <view class='title'>密文</view>
@@ -10,7 +10,7 @@
   </view>
   <view class='item'>
     <view class='title'>创建时间</view>
-    <view class='data'>{{util.formatTime(item.date,"-").datetime}}</view>
+    <view class='data'>{{item.date}}</view>
   </view>
   <view class='item'>
     <view class='title'>浏览次数</view>

@@ -1,6 +1,5 @@
 // my_works/course/pages/import/school.js
-const util = require('../../utils/util')
-const host = util.host
+const host = getApp().globalData.host;
 
 Page({
 

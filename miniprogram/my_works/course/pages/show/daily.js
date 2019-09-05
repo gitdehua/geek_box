@@ -1,10 +1,9 @@
 // my_works/course/pages/show/daily.js
 var getCourse = require('../../utils/courseTool.js').getCourse;
-var util = require('../../utils/util.js');
 
 Page({
   data: {
-    weekString: null,
+    dateString: null,
     date: null,
     courseList: null,
     touchX: null,
@@ -26,8 +25,8 @@ Page({
     var courseList = getCourse("day", e.detail.value);
     this.setData({
       date: e.detail.value,
-      courseList: courseList,
-      weekString: util.formatWeek(new Date(e.detail.value).getDay())
+      dateString: new Date(e.detail.value).format("yyyy-MM-dd W"),
+      courseList: courseList
     })
   },
 
@@ -103,8 +102,8 @@ Page({
       if (timeStamp >= startDate && timeStamp <= endDate) {
         var date = new Date(timeStamp * 1000);
         this.setData({
-          date: util.formatTime(date, "-").date,
-          weekString: util.formatWeek(date.getDay())
+          date: date.format("yyyy-MM-dd"),
+          dateString: date.format("yyyy-MM-dd W"),
         });
         this.getCourseList();
       } else {
@@ -125,7 +124,7 @@ Page({
 
   onLoad: function() {
     var course = wx.getStorageSync('course');
-    var date = util.formatTime(new Date(), "-").date;
+    var date = new Date().format("yyyy-MM-dd");
     var startDate, endDate;
     if (course != '' && (typeof course.startDate) == "string") {
       startDate = course.startDate;
@@ -139,7 +138,7 @@ Page({
     var subjects = (typeof course.subjects) == "object" ? course.subjects : [];
     this.setData({
       date,
-      weekString: util.formatWeek(new Date().getDay()),
+      dateString: new Date(date).format("yyyy-MM-dd W"),
       subjects,
       startDate,
       endDate

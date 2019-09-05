@@ -1,12 +1,8 @@
 <!--pages/about/about.wxml-->
 <nav-bar title="关于"></nav-bar>
 <view class='section content'>
-  <img src='https://www.dehuaio.com/geek_box.jpg' />
+  <img src='cloud://test-936601.7465-test-936601/qrcode.jpg' />
   <view class='info'>{{info}}</view>
-  <view class='item'>
-    <view class='title'>appid</view>
-    <view class='data'>{{appid}}</view>
-  </view>
 </view>
 <view class='section'>
   <button type="primary" bindtap='update'>检查更新</button>

@@ -5,7 +5,7 @@
     <view class='item'>
       <view class='title'>选择日期</view>
       <view class='data'>
-        <picker class="afterIcon" mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">{{date}} {{weekString}}</picker>
+        <picker class="afterIcon" mode="date" value="{{date}}" start="{{startDate}}" end="{{endDate}}" bindchange="bindDateChange">{{dateString}}</picker>
       </view>
     </view>
   </view>

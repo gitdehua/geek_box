@@ -18,9 +18,12 @@ Page({
       name: 'ciphertext_manage',
       success: res => {
         wx.hideLoading();
-        console.log(res)
+        var result = res.result.data;
+        for(var k in result){
+          result[k].date = new Date(result[k].date).format("yyyy-MM-dd hh:mm:ss")
+        }
         this.setData({
-          result: res.result.data
+          result
         });
       },
       fail: err => {

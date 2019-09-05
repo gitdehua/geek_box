@@ -1,5 +1,4 @@
 // my_works/course/pages/import/server.js
-var util = require('../../utils/util');
 const db = wx.cloud.database()
 
 Page({
@@ -79,7 +78,7 @@ Page({
       var courseList = res.data;
       for (var i = 0; i < courseList.length; i++) {
         console.log(courseList[i].time)
-        courseList[i].time = util.formatTime(new Date(courseList[i].time), "-").datetime
+        courseList[i].time = new Date(courseList[i].time).format("yyyy-MM-dd hh:mm:ss");
       }
       this.setData({
         courseList

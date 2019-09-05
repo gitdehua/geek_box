@@ -1,6 +1,4 @@
 // pages/course/upload/upload.js
-const util = require('../../utils/util')
-const host = util.host
 
 Page({
 

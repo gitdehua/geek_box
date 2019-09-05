@@ -1,79 +1,3 @@
-
-const host = "https://www.dehuaio.com/api";
-
-const formatTime = function (date, delimiter) {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
-
-  const _date = [year, month, day].map(formatNumber).join(delimiter);
-  const time = [hour, minute, second].map(formatNumber).join(':');
-  const datetime = _date + " " + time;
-
-  return {
-    date: _date,
-    datetime: datetime,
-    time: time
-  }
-}
-
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
-}
-
-/**
- * formatWeek
- */
-const formatWeek = day => {
-  var str = null;
-  switch (day) {
-    case 0: str = "日"; break;
-    case 1: str = "一"; break;
-    case 2: str = "二"; break;
-    case 3: str = "三"; break;
-    case 4: str = "四"; break;
-    case 5: str = "五"; break;
-    case 6: str = "六"; break;
-  }
-  return "星期" + str;
-}
-
-const template = function (msgData, form_id, pageURL) {
-  wx.request({
-    url: `${host}/template.php`,
-    method: "POST",
-    dataType: "json",
-    data: {
-      form_id,
-      sessionKey: wx.getStorageSync("loginData").sessionKey,
-      msgData: JSON.stringify(msgData),
-      pageURL
-    },
-    success: res => {
-      console.log(res.data);
-    }
-  });
-}
-
-function getMediaType(name) {
-  var mediaType;
-  switch (name) {
-    case "png": mediaType = "image/png"; break;
-    case "gif": mediaType = "image/gif"; break;
-    case "jpg":
-    case "jpeg": mediaType = "image/jpeg"; break;
-    case "svg": mediaType = "image/svg+xml"; break;
-    case "image/webp": mediaType = "image/webp"; break;
-    default: mediaType = null; break;
-  }
-  console.log(name, mediaType);
-  return mediaType
-}
-
 function base64Encode(option) {
   if ((typeof option) == "string") {
     option = utf16to8(option);
@@ -130,10 +54,5 @@ function utf16to8(str) {
 }
 
 module.exports = {
-  host,
-  formatTime: formatTime,
-  formatWeek: formatWeek,
-  template: template,
-  base64Encode,
-  getMediaType
+  base64Encode 
 }

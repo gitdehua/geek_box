@@ -73,7 +73,7 @@ Page({
     return {
       title: `【加密内容】看看 ${getApp().globalData.userInfo.nickName} 说了什么`,
       path: `pages/aes/decode/decode?aes_id=${this.data.aes_id}`,
-      imageUrl: "https://www.dehuaio.com/encrypt.jpg"
+      imageUrl: "http://res.hidehua.com/encrypt.jpg?x-oss-process=style/default"
     }
   },
 
