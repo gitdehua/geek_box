@@ -57,7 +57,7 @@
   <view class="header">在线导入</view>
   <view class="content nav">
     <navigator class="item" url="/my_works/course/pages/import/server">服务器</navigator>
-    <navigator class="item" url="/my_works/course/pages/import/school">教务系统</navigator>
+    <!-- <navigator class="item" url="/my_works/course/pages/import/school">教务系统</navigator> -->
   </view>
 </view>
 

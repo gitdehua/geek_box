@@ -44,12 +44,6 @@
         "iconPath": "images/lock.png",
         "selectedIconPath": "images/lock_l.png",
         "text": "AES"
-      },
-      {
-        "pagePath": "pages/curl/curl",
-        "iconPath": "images/curl.png",
-        "selectedIconPath": "images/curl_l.png",
-        "text": "cURL"
       }
     ]
   },
