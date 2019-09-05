@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "授权管理"
+  "navigationBarTitleText": "授权管理",
+  "usingComponents": {
+    "mp-msg": "/component/msg/msg"
+  }
 }

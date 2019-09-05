@@ -1,6 +1,19 @@
 <!--pages/authorize/authorize.wxml-->
 <nav-bar title="授权管理"></nav-bar>
-<view class='section'>
-  <text>小程序需要你的部分信息(微信昵称)才能完成相关操作，请授权小程序</text>
-  <button open-type="getUserInfo" bindgetuserinfo='getuserinfo' type="primary">授权</button>
-</view>
+
+<mp-msg type="waiting" title="权限申请">
+  <view slot="desc">相关操作需要获取以下权限，请授权小程序</view>
+  <view slot="extend">
+    <view>获取你的公开信息（昵称、头像...）</view>
+  </view>
+  <view slot="handle">
+    <button class="weui-btn" open-type="getUserInfo" bindgetuserinfo='getuserinfo' type="primary">授权</button>
+    <button class="weui-btn"  bindgetuserinfo='cancel' type="default">取消</button>
+  </view>
+  <view slot="footer">
+    <view class="weui-footer__links">
+      <navigator url="/pages/index/index" open-type='switchTab' class="weui-footer__link">极客宝箱</navigator>
+    </view>
+    <view class="weui-footer__text">Copyright © imdh.top</view>
+  </view>
+</mp-msg>
