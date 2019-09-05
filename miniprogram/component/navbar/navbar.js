@@ -39,8 +39,10 @@ Component({
     }]
   },
   attached: function() {
+    var menuButton = wx.getMenuButtonBoundingClientRect();
     this.setData({
-      height: wx.getMenuButtonBoundingClientRect().bottom + 10,
+      top: menuButton.top-10,
+      height: menuButton.bottom + 10,
       "navs[0].show": getCurrentPages().length > 1
     })
   },

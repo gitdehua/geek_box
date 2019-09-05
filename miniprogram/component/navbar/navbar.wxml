@@ -1,10 +1,10 @@
 <!--component/navbar/navbar.wxml-->
 <view style='height:{{height}}px'></view>
-<view class='nav-wrap' style='height:{{height}}px'>
-  <view class='nav-title'>{{title}}</view>
+<view class='nav-wrap' style='height:{{height}}px;padding-top:{{top}}px'>
   <view class='nav-capsule' wx:if='{{showCapsule}}'>
     <navigator wx:for='{{navs}}' wx:key='item' wx:if='{{item.show&&item.text!=""}}' open-type='{{item.type}}' style='color:{{item.color}};' hover-class='none' url='{{item.url}}'>{{item.text}}</navigator>
   </view>
+  <view class='nav-title'>{{title}}</view>
 </view>
 <view style='position: fixed;left:0;top:{{height}}px;z-index:100;'>
   <slot></slot>
