@@ -29,7 +29,8 @@ exports.main = async(event, context) => new Promise((resolve, reject) => {
           data: {
             value: body.access_token
           }
-        }).then(function() {
+        }).then(function () {
+          console.log(`\n------------------UPDATE------------------ncloud db\n------------------n\n`);
           _return("cloud_db");
         });
 
@@ -50,7 +51,7 @@ exports.main = async(event, context) => new Promise((resolve, reject) => {
             reject('[UPDATE ERROR] - ', err.message);
             return;
           }
-          console.log(`--------------------------UPDATE----------------------------\nUPDATE affectedRows ${result.affectedRows}\n-----------------------------------------------------------------\n\n`);
+          console.log(`\n------------------UPDATE------------------nUPDATE affectedRows ${result.affectedRows}\n------------------n\n`);
           _return("mysql");
         });
       } catch (e) {
