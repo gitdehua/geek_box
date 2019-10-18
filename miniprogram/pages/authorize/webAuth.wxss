@@ -2,11 +2,15 @@
 
 page {
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.section{
-  margin-top: 20vh;
-  text-align: center;
+mp-msg {
+  flex: 1;
+  display: flex;
+  align-content: space-around;
 }
 
 .code {

@@ -1,1 +1,14 @@
 /* pages/authorize/authorize.wxss */
+
+page {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+mp-msg {
+  flex: 1;
+  display: flex;
+  align-content: space-around;
+}

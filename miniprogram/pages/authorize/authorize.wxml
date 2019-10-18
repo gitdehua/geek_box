@@ -8,7 +8,7 @@
   </view>
   <view slot="handle">
     <button class="weui-btn" open-type="getUserInfo" bindgetuserinfo='getUserInfo' type="primary">授权</button>
-    <button class="weui-btn"  bindtap='cancel' type="default">取消</button>
+    <button class="weui-btn" bindtap='cancel' type="default">取消</button>
   </view>
   <view slot="footer">
     <view class="weui-footer__links">
