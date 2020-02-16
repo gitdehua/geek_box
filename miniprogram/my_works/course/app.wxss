@@ -1,9 +1,0 @@
-/**app.wxss**/
-
-/* @import "style/common.wxss"; */
-
-page {
-  background-color: #f8f8f8;
-  font-size: 32rpx;
-  line-height: 1.6;
-}
