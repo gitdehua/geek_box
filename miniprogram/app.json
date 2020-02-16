@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/number/number",
     "pages/base64/base64",
     "pages/md5/md5",
     "pages/dns/dns",
@@ -47,23 +46,5 @@
       }
     ]
   },
-  "subpackages": [
-    {
-      "root": "my_works/course",
-      "pages": [
-        "pages/course/course",
-        "pages/show/weekly",
-        "pages/show/daily",
-        "pages/courses/edit",
-        "pages/courses/list",
-        "pages/subjects/edit",
-        "pages/subjects/list",
-        "pages/config/setDate",
-        "pages/config/upload",
-        "pages/import/server",
-        "pages/import/school"
-      ]
-    }
-  ],
   "sitemapLocation": "sitemap.json"
 }
