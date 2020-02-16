@@ -1,0 +1,31 @@
+/* component/loading-more/loading-more.wxss */
+
+
+.loading-bar {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-img {
+  height: 16px;
+  width: 16px;
+  margin: 8px;
+  animation: ui_loading 1s steps(12, end) infinite;
+}
+
+@keyframes ui_loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-tips {
+  color: #666;
+  font-size: smaller;
+}

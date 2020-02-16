@@ -1,11 +1,21 @@
 <!--component/navbar/navbar.wxml-->
-<view style='height:{{height}}px'></view>
-<view class='nav-wrap' style='height:{{height}}px;padding-top:{{top}}px'>
-  <view class='nav-capsule' wx:if='{{showCapsule}}'>
-    <navigator wx:for='{{navs}}' wx:key='item' wx:if='{{item.show&&item.text!=""}}' open-type='{{item.type}}' style='color:{{item.color}};' hover-class='none' url='{{item.url}}'>{{item.text}}</navigator>
-  </view>
-  <view class='nav-title'>{{title}}</view>
-</view>
-<view style='position: fixed;left:0;top:{{height}}px;z-index:100;'>
+
+<view style='height:{{menuButton.bottom+10}}px'></view>
+
+<cover-view class="bar" style="height:{{menuButton.bottom}}px;">
+  <cover-view class="content">
+    <block wx:for="{{navs}}" wx:for-item="nav" wx:if='{{showNav&&nav.show}}'>
+      <cover-image bindtap="nav" data-type="{{nav.type}}" data-page="{{nav.url}}" src="{{nav.img}}" class="nav" />
+      <cover-view class="separator" />
+    </block>
+    <block wx:if='{{loading}}'>
+      <cover-image src="./loading.gif" class="nav" />
+      <cover-view class="separator" />
+    </block>
+    <cover-view class="title">{{title}}</cover-view>
+  </cover-view>
+</cover-view>
+
+<view style='position:fixed;left:0;top:{{menuButton.bottom+10}}px;z-index:500;'>
   <slot></slot>
 </view>

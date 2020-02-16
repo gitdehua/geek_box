@@ -1,5 +1,5 @@
 <!--pages/index/index.wxml-->
-<nav-bar show-capsule='{{false}}'></nav-bar>
+<nav-bar show-nav='{{false}}'></nav-bar>
 
 <view class="section">
   <navigator class="item" url="/pages/number/number">进制转换</navigator>

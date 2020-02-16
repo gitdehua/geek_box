@@ -1,41 +1,38 @@
 /* component/navbar/navbar.wxss */
 
-.nav-wrap {
+.bar {
+  background-color: #fff;
+  padding-bottom: 10px;
+  display: flex;
   position: fixed;
-  width: 100vw;
   top: 0;
-  left: 0;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  color: #000;
-  z-index: 9999999;
+  width: 100vw;
+  z-index: 1000;
+}
+
+.content {
   display: flex;
+  flex: 1;
+  align-self: flex-end;
   align-items: center;
-  box-sizing: border-box;
+  height: 31px;
+  padding-left: 6px;
 }
 
-.nav-title {
-  padding-left: 10px;
+.nav {
+  width: 18px;
+  height: 18px;
+  padding: 6px 9px;
 }
 
-.nav-capsule {
-  height: 28px;
-  margin-left: 5px;
-  display: flex;
-  align-items: center;
-  justify-items: center;
+.separator {
+  width: 1px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: scaleY(0.5);
 }
 
-.nav-capsule>navigator {
-  height: 15px;
-  font-size: 14px;
-  line-height: 15px;
-  padding: 0 2px;
-  min-width: 26px;
-  font-family: "iconfont" !important;
-  text-align: center;
-}
-
-.nav-capsule>navigator:not(:last-child) {
-  border-right: 1px solid #ddd;
+.title {
+  margin-left: 8px;
+  font-size: 16px;
 }

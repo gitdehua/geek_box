@@ -1,0 +1,7 @@
+<!--component/loading-more/loading-more.wxml-->
+
+<view class="loading-bar">
+  <image class="loading-img" hidden="{{!icon}}" src="/images/loading.png" />
+  <view class="loading-tips" hidden="{{!icon}}">加载中</view>
+  <view class="loading-tips" hidden="{{!tips||icon}}">{{tips}}</view>
+</view>

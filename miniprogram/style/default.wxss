@@ -77,10 +77,8 @@ view.textarea {
 }
 
 navigator.btn {
-  flex: 1;
   box-sizing: border-box;
   border-radius: 5px;
-  border: 1px solid #ddd;
   text-align: center;
   overflow: hidden;
   color: #000;
@@ -91,6 +89,20 @@ navigator.btn {
   font-size: 18px;
   text-decoration: none;
   line-height: 2.55555556;
+  position: relative;
+}
+
+navigator.btn::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: " ";
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border: 2rpx solid #dfdfdf;
 }
 
 navigator.btn.mini {

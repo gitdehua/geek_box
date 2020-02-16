@@ -17,7 +17,7 @@ textarea {
   padding: 10px;
 }
 
-.control>button {
+.control>button, .control>.btn {
   flex: 1;
   text-align: center;
   margin: 0 10px;
