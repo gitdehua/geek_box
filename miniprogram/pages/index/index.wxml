@@ -2,10 +2,6 @@
 <nav-bar show-nav='{{false}}'></nav-bar>
 
 <view class="section">
-  <navigator class="item" url="/pages/number/number">进制转换</navigator>
-</view>
-
-<view class="section">
   <navigator class="item" url="/pages/base64/base64">BASE64</navigator>
   <navigator class="item" url="/pages/md5/md5">MD5</navigator>
 </view>
