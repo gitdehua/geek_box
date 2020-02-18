@@ -1,4 +1,0 @@
-<!--component/img/img.wxml-->
-<view>
-  <image mode='aspectFit' bindtap='_previewImage' style='width:100%;' src="{{src}}"></image>
-</view>

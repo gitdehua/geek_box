@@ -27,7 +27,6 @@
     "navigationBarTextStyle": "black"
   },
   "usingComponents": {
-    "img": "/component/img/img",
     "nav-bar": "/component/navbar/navbar"
   },
   "tabBar": {

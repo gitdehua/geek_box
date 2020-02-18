@@ -1,7 +1,7 @@
 <!--pages/about/about.wxml-->
 <nav-bar title="关于"></nav-bar>
 <view class='section content'>
-  <img src='cloud://test-936601.7465-test-936601/qrcode.jpg' />
+  <image src="cloud://test-936601.7465-test-936601/qrcode.jpg" mode="aspectFit" show-menu-by-longpress="true" />
   <view class='info'>{{info}}</view>
 </view>
 <view class='section'>
