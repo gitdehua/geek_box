@@ -5,7 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    navs: [
+      [{
+        title: "BASE64",
+        url: "/pages/base64/base64"
+      }, {
+        title: "MD5",
+        url: "/pages/md5/md5"
+      }],
+      [{
+        title: "DNS查询",
+        url: "/pages/dns/dns"
+      }, {
+        title: "CloudFlare DNS API",
+        url: "/pages/cloudflare/selectZone"
+      }],
+      [{
+        title: "关于",
+        url: "/pages/about/about"
+      }]
+    ]
   },
 
   onShareAppMessage: function(res) {

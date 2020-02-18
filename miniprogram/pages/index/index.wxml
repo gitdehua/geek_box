@@ -1,21 +1,16 @@
 <!--pages/index/index.wxml-->
-<nav-bar show-nav='{{false}}'></nav-bar>
+<nav-bar show-nav='{{false}}' />
 
-<view class="section">
-  <navigator class="item" url="/pages/base64/base64">BASE64</navigator>
-  <navigator class="item" url="/pages/md5/md5">MD5</navigator>
+<view wx:for="{{navs}}" wx:for-item="navGroup" class="ui-cells">
+  <navigator wx:for="{{navGroup}}" wx:for-item="nav" url="{{nav.url}}" class="ui-cell ui-cell_access">
+    <label class="ui-cell_bd">{{nav.title}}</label>
+    <view class="ui-cell_ft" />
+  </navigator>
 </view>
 
-<view class="section">
-  <navigator class="item" url="/pages/dns/dns">DNS查询</navigator>
-  <navigator class="item" url="/pages/cloudflare/selectZone">CloudFlare DNS API</navigator>
-</view>
-
-<!-- <view class="section">
-  <navigator class="item" url="/my_works/course/pages/show/daily">课程表</navigator>
-</view> -->
-
-<view class="section">
-  <navigator class="item" url="/pages/about/about">关于</navigator>
-  <button class="item nav" plain="true" open-type="share">分享</button>
+<view class="ui-cells">
+  <button class="share ui-cell ui-cell_access" hover-class="none" plain="true" open-type="share">
+    <label class="ui-cell_bd">分享</label>
+    <view class="ui-cell_ft" />
+  </button>
 </view>

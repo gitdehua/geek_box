@@ -1,25 +1,15 @@
 /* pages/index/index.wxss */
 
-page{
-  padding-top: 10px;
+.share {
+  color: #000 !important;
+  border: none !important;
+  position: unset;
+  font-size: inherit;
+  text-align: unset;
+  line-height: unset;
+  border-radius: unset;
 }
 
-.section {
-  background-color: #fff;
-  padding: 0;
-}
-
-.section>.item {
-  line-height: 3rem;
-  padding: 0 40rpx;
-}
-
-.section>.item:not(:last-child) {
-  border-bottom: 1px solid #f3f3f3;
-}
-
-.section>.item::after {
-  content: "\3009";
-  float: right;
-  color: #bbb;
+.share::after {
+  display: none;
 }
