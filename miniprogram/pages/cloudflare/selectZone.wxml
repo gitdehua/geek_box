@@ -1,0 +1,13 @@
+<!--pages/cloudflare/selectZone.wxml-->
+<nav-bar title="CloudFlare DNS API" />
+
+<view class="ui-cells">
+  <navigator wx:for="{{zones}}" url="./DNS/list?zoneId={{item.zoneId}}" class="ui-cell ui-cell_access">
+    <view class="ui-cell_bd" style="overflow: hidden;">{{item.domainName}}</view>
+    <view class="ui-cell_ft" />
+  </navigator>
+</view>
+
+<view style="margin: 8px;">
+  <button catchtap="navToBindToken" class="ui-btn ui-flex_item">绑定 Token</button>
+</view>

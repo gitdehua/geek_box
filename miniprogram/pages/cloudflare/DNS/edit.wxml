@@ -1,0 +1,39 @@
+<!--pages/cloudflare/DNS/edit.wxml-->
+
+<nav-bar title="{{zone.record?'修改':'添加'}}记录" />
+
+<form bindsubmit="submit">
+  <view class="ui-cells ui-cells_form">
+    <view class="ui-cell">
+      <view class="ui-cell_hd">类型</view>
+      <picker name="type" mode="selector" range="{{types}}" value="{{typeId}}" bindchange="selectType" class="ui-flex_item">
+        <view class="ui-select">{{types[typeId]}}</view>
+      </picker>
+    </view>
+    <view class="ui-cell">
+      <view class="ui-cell_bd">
+        <input name="name" maxlength="255" value="{{record.name}}" class="ui-input" placeholder="记录名" />
+      </view>
+    </view>
+    <view class="ui-cell">
+      <view class="ui-cell_bd">
+        <input name="content" maxlength="-1" value="{{record.content}}" class="ui-input" placeholder="记录值" />
+      </view>
+    </view>
+    <view class="ui-cell">
+      <view class="ui-cell_bd">
+        <input name="ttl" class="ui-input" value="{{record.ttl}}" type="number" placeholder="ttl, Value of 1 is 'automatic'" />
+      </view>
+    </view>
+    <view class="ui-cell" wx:if="{{typeId==4}}">
+      <view class="ui-cell_bd">
+        <input name="priority" class="ui-input" value="{{record.priority}}" type="number" placeholder="优先级, 0-65535" />
+      </view>
+    </view>
+  </view>
+  <view class="ui-form_opr-area">
+    <button type="primary" form-type="submit" class="ui-btn submit-btn">提交</button>
+  </view>
+</form>
+
+<view class="errMsg">{{errMsg}}</view>

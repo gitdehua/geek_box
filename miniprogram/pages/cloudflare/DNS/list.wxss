@@ -1,0 +1,11 @@
+/* pages/cloudflare/DNS/list.wxss */
+
+.ctl-area {
+  padding: var(--spc1);
+  text-align: center;
+}
+
+.delete {
+  background-color: #e55;
+  color: #fff;
+}

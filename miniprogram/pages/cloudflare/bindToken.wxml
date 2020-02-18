@@ -1,0 +1,32 @@
+<!--pages/cloudflare/bindToken.wxml-->
+<nav-bar title="添加CloudFlare Token" />
+
+<form bindsubmit="addToken">
+  <view class="ui-form_control-area">
+    <view class="ui-cells_group ui-cells_group_form">
+      <view class="ui-cells ui-cells_form">
+        <view class="ui-cell">
+          <view class="ui-cell_hd">
+            <label class="ui-label">Token</label>
+          </view>
+          <view class="ui-cell_bd">
+            <input name="token" class="ui-input" placeholder="填写你在CloudFlare创建的token" />
+          </view>
+        </view>
+        <view class="ui-cell">
+          <view class="ui-cell_hd">
+            <label class="ui-label">域名</label>
+          </view>
+          <view class="ui-cell_bd">
+            <input name="domainName" class="ui-input" placeholder="域名" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="ui-form_opr-area">
+    <button type="primary" form-type="submit" class="ui-btn submit-btn">添加</button>
+  </view>
+</form>
+
+<view class="errMsg">{{errMsg}}</view>

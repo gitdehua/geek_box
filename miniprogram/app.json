@@ -12,6 +12,10 @@
     "pages/about/about",
     "pages/authorize/authorize",
     "pages/authorize/webAuth",
+    "pages/cloudflare/bindToken",
+    "pages/cloudflare/selectZone",
+    "pages/cloudflare/DNS/list",
+    "pages/cloudflare/DNS/edit",
     "pages/test/test"
   ],
   "window": {

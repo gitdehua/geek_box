@@ -1,0 +1,20 @@
+/* pages/cloudflare/DNS/edit.wxss */
+
+.ui-cells_form .ui-cell_hd {
+  min-width: 85px;
+  padding-right: 8px;
+}
+
+.submit-btn {
+  width: 450rpx;
+}
+
+.ui-form_opr-area {
+  margin: 10px;
+}
+
+.errMsg {
+  margin-top: 10px;
+  color: #e33;
+  font-size: smaller;
+}

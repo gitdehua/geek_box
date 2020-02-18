@@ -1,0 +1,11 @@
+/* pages/cloudflare/bindToken.wxss */
+
+.submit-btn {
+  width: 450rpx;
+}
+
+.errMsg {
+  margin-top: 10px;
+  color: #e33;
+  font-size: smaller;
+}

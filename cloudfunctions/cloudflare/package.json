@@ -1,5 +1,5 @@
 {
-  "name": "sum",
+  "name": "cloudflare",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "wx-server-sdk": "latest"
+    "querystring": "^0.2.0",
+    "request": "^2.88.2",
+    "wx-server-sdk": "^1.8.2"
   }
 }
