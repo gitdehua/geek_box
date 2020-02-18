@@ -8,7 +8,7 @@ Component({
     },
     title: {
       type: String,
-      value: 'demo',
+      value: '极客宝箱',
       observer: function(newVal, oldVal, changedPath) {
         this.setData({
           title: newVal
@@ -37,7 +37,7 @@ Component({
   },
   data: {
     showNav: true,
-    title: "demo",
+    title: "极客宝箱",
     navs: [{
       type: "navigateBack",
       show: true,
