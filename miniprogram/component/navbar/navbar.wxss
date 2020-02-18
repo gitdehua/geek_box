@@ -36,3 +36,47 @@
   margin-left: 8px;
   font-size: 16px;
 }
+
+.menu-area {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 8px 0;
+  position: absolute;
+  min-width: 200rpx;
+  max-width: 300rpx;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  box-shadow: 0px 0px 5px #888;
+}
+
+.menu-area::before {
+  content: " ";
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  top: -9px;
+  left: 10px;
+}
+
+.menu-area>.menu {
+  display: flex;
+  padding: 6px 9px;
+  line-height: 18px;
+}
+
+.menu-area>.menu>.fonticon {
+  font-family: "iconfont";
+  width: 18px;
+  height: 18px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.menu-area>.menu>.title {
+  flex: 1;
+  overflow: hidden;
+  font-size: 16px;
+  margin-left: 8px;
+}

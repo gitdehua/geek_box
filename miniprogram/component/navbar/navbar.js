@@ -8,21 +8,20 @@ Component({
     },
     title: {
       type: String,
-      value: '极客宝箱',
+      value: 'demo',
       observer: function(newVal, oldVal, changedPath) {
         this.setData({
           title: newVal
         });
       }
     },
-    nav: {
+    menus: {
       type: Object,
       value: null,
       observer: function(newVal, oldVal, changedPath) {
-        var navs = this.data.navs;
-        navs[2] = newVal;
+        var menus = this.data.menus;
         this.setData({
-          navs,
+          menus,
         });
       }
     },
@@ -38,7 +37,7 @@ Component({
   },
   data: {
     showNav: true,
-    title: "极客宝箱",
+    title: "demo",
     navs: [{
       type: "navigateBack",
       show: true,
@@ -48,7 +47,8 @@ Component({
       url: '/pages/index/index',
       show: true,
       img: "./home.png"
-    }]
+    }],
+    menus: []
   },
   attached: function() {
     var menuButton = wx.getMenuButtonBoundingClientRect();
@@ -76,6 +76,24 @@ Component({
           });
           break;
       }
+    },
+
+    showMenus: function(e) {
+      this.setData({
+        showMenus: !this.data.showMenus
+      })
+    },
+
+    menu: function(e) {
+      var menu = e.currentTarget.dataset.item;
+
+      this.triggerEvent("menuEvent", {
+        menu
+      }, {});
+
+      this.setData({
+        showMenus: !this.data.showMenus
+      });
     }
   }
 })

@@ -8,6 +8,10 @@
       <cover-image bindtap="nav" data-type="{{nav.type}}" data-page="{{nav.url}}" src="{{nav.img}}" class="nav" />
       <cover-view class="separator" />
     </block>
+    <block wx:if='{{menus.length>0}}'>
+      <cover-image bindtap="showMenus" src="/images/menu.png" class="nav" />
+      <cover-view class="separator" />
+    </block>
     <block wx:if='{{loading}}'>
       <cover-image src="./loading.gif" class="nav" />
       <cover-view class="separator" />
@@ -16,6 +20,12 @@
   </cover-view>
 </cover-view>
 
-<view style='position:fixed;left:0;top:{{menuButton.bottom+10}}px;z-index:500;'>
+<view style='position:fixed;left:0;top:{{menuButton.bottom+10}}px;z-index:500;width:100%;'>
   <slot></slot>
+  <view wx:if="{{showMenus}}" class="menu-area">
+    <view class="menu" wx:for="{{menus}}" catchtap="menu" data-item="{{item}}">
+      <view class="fonticon" style="color:{{item.color}}">{{item.icon}}</view>
+      <view class="title">{{item.title}}</view>
+    </view>
+  </view>
 </view>

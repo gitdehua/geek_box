@@ -134,6 +134,21 @@
   text-align: right;
 }
 
+.ui-select {
+  position: relative;
+}
+
+.ui-select::before {
+  content: "\e015";
+  font-family: "iconfont" !important;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: #aaa;
+  font-size: smaller;
+  margin-top: -0.5em;
+}
+
 .ui-panel {
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -213,7 +228,7 @@
 }
 
 .ui-cell_access .ui-cell_ft:after {
-  content: "\e014";
+  content: "\e015";
   font-family: "iconfont" !important;
   color: rgba(0, 0, 0, 0.6);
 }
