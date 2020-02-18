@@ -11,6 +11,12 @@ Page({
       color: "#f70",
       type: "function",
       funName: "addRecord"
+    }, {
+      icon: '\ue009',
+      title: "刷新",
+      color: "#f70",
+      type: "function",
+      funName: "getRecords"
     }]
   },
 
@@ -120,42 +126,45 @@ Page({
   deleteRecord: function(e) {
     console.log(e);
     var record = e.target.dataset.record;
-    wx.showModal({
-      title: "删除确认",
-      content: `${record.type}, ${record.name}, ${record.content}`,
-      success(res) {
-        if (res.confirm) {
-          var data = {
-            token: this.data.zone.token,
-            zoneId: this.data.zone.zoneId,
-            recordId: e.target.dataset.recordId
-          }
-          data.action = "deleteDnsRecord";
 
-          wx.cloud.callFunction({
-            name: "cloudflare",
-            data
-          }).then(res => {
-            console.log(res)
-            var result = res.result;
-            if (result.statusCode != 200) {
-              throw result.statusCode + result.body;
-            }
-            wx.hideLoading();
-            var body = JSON.parse(result.body);
-            if (body.result.id == data.recordId) {
-              this.getRecords();
-            }
-          }).catch(err => {
-            wx.hideLoading();
-            wx.showModal({
-              title: "删除失败",
-              showCancel: false
-            })
-            console.error("调用失败：", err)
-          });
-        }
+    new Promise((resolve, reject) => {
+      wx.showModal({
+        title: "删除确认",
+        content: `${record.type}, ${record.name}, ${record.content}`,
+        success: resolve,
+        fail: reject
+      });
+    }).then(res => {
+      if (!res.confirm) return;
+      var data = {
+        token: this.data.zone.token,
+        zoneId: this.data.zone.zoneId,
+        recordId: record.id
       }
-    });
+      data.action = "deleteDnsRecord";
+
+      wx.cloud.callFunction({
+        name: "cloudflare",
+        data
+      }).then(res => {
+        console.log(res)
+        var result = res.result;
+        if (result.statusCode != 200) {
+          throw result.statusCode + result.body;
+        }
+        wx.hideLoading();
+        var body = JSON.parse(result.body);
+        if (body.result.id == data.recordId) {
+          this.getRecords();
+        }
+      }).catch(err => {
+        wx.hideLoading();
+        wx.showModal({
+          title: "删除失败",
+          showCancel: false
+        })
+        console.error("调用失败：", err)
+      });
+    }).catch(console.error);;
   }
 })
