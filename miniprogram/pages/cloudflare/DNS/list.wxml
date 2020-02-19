@@ -7,7 +7,7 @@
   </view>
 </nav-bar>
 
-<view id="pageSelect1" class="ui-cells" style="height:{{pageSelectHeight}}px;" />
+<view style="height:{{pageSelectHeight}}px;" />
 
 <view class="ui-cells" wx:for="{{records.result}}">
   <view class="ui-cell">

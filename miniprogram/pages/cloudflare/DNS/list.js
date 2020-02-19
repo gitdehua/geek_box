@@ -24,7 +24,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    console.log(options)
     var zone = wx.getStorageSync("zones")[options.zoneId];
     this.setData({
       zone
@@ -32,7 +31,6 @@ Page({
     this.getRecords();
 
     wx.createSelectorQuery().select('#pageSelect').boundingClientRect((res) => {
-      console.log(res)
       this.setData({
         pageSelectHeight: res.height
       })
@@ -54,7 +52,6 @@ Page({
   },
 
   changePage: function(e) {
-    console.log(e)
     var {
       page,
       type
@@ -100,7 +97,6 @@ Page({
   },
 
   update: function(e) {
-    console.log(e);
     var record = e.target.dataset.record;
 
     var {
@@ -124,7 +120,6 @@ Page({
   },
 
   deleteRecord: function(e) {
-    console.log(e);
     var record = e.target.dataset.record;
 
     new Promise((resolve, reject) => {
