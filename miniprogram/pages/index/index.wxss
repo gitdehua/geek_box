@@ -13,3 +13,7 @@
 .share::after {
   display: none;
 }
+
+.ui-cell {
+  font-size: smaller;
+}

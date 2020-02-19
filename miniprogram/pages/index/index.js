@@ -19,12 +19,23 @@ Page({
       }, {
         title: "CloudFlare DNS API",
         url: "/pages/cloudflare/selectZone"
-      }],
-      [{
-        title: "关于",
-        url: "/pages/about/about"
       }]
     ]
+  },
+
+  onLoad: function(options) {
+    const db = wx.cloud.database();
+    const _ = db.command;
+    db.collection("app_route").where({
+      env: _.gte(getApp().globalData.env)
+    }).get().then(res => {
+      console.log(res);
+      if (res.data.length == 0) return;
+      this.data.navs.push(res.data);
+      this.setData({
+        navs: this.data.navs
+      });
+    }).catch(err => console.error);
   },
 
   onShareAppMessage: function(res) {

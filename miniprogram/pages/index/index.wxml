@@ -9,6 +9,10 @@
 </view>
 
 <view class="ui-cells">
+  <navigator url="/pages/about/about" class="ui-cell ui-cell_access">
+    <label class="ui-cell_bd">关于</label>
+    <view class="ui-cell_ft" />
+  </navigator>
   <button class="share ui-cell ui-cell_access" hover-class="none" plain="true" open-type="share">
     <label class="ui-cell_bd">分享</label>
     <view class="ui-cell_ft" />

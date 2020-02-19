@@ -1,6 +1,9 @@
 //app.js
 import "./utils/init.js";
+
 class GlobalData {
+  env = (typeof __wxConfig == "object") ? ["develop", "trial", "release"].indexOf(__wxConfig.envVersion) : null;
+
   userInfo;
   getUserInfo() {
     if (this.userInfo) {
@@ -22,9 +25,6 @@ App({
     wx.cloud.init();
 
     getUserInfo();
-
-    // 获取主机
-    getAppHost();
 
     syncCourse();
   },
@@ -75,12 +75,5 @@ function syncCourse() {
         console.log("导入数据：", courseData);
       });
     },
-  });
-}
-
-function getAppHost() {
-  const db = wx.cloud.database()
-  db.collection('app_config').doc('host').get().then(res => {
-    getApp().globalData.host = res.data.value;
   });
 }
