@@ -19,7 +19,6 @@
     "pages/test/test"
   ],
   "window": {
-    "navigationStyle": "custom",
     "backgroundColor": "#f8f8f8",
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#F6F6F6",
@@ -49,5 +48,8 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  }
 }

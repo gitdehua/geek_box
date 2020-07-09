@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "授权管理",
   "usingComponents": {
-    "mp-msg": "/component/msg/msg"
+    "mp-msg": "/miniprogram_npm/weui-miniprogram/msg/msg"
   }
 }
