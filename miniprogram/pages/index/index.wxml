@@ -1,5 +1,4 @@
 <!--pages/index/index.wxml-->
-<nav-bar show-nav='{{false}}' />
 
 <view wx:for="{{navs}}" wx:for-item="navGroup" class="ui-cells">
   <navigator wx:for="{{navGroup}}" wx:for-item="nav" url="{{nav.url}}" class="ui-cell ui-cell_access">

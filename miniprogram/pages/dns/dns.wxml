@@ -1,5 +1,5 @@
 <!--pages/dns/dns.wxml-->
-<nav-bar title="DNS记录查询"></nav-bar>
+
 <form bindsubmit="submit">
   <view class="section content">
     <view class='item'>

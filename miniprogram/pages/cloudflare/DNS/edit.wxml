@@ -1,7 +1,5 @@
 <!--pages/cloudflare/DNS/edit.wxml-->
 
-<nav-bar title="{{zone.record?'修改':'添加'}}记录" />
-
 <form bindsubmit="submit">
   <view class="ui-cells ui-cells_form">
     <view class="ui-cell">

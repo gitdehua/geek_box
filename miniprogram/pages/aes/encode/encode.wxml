@@ -1,5 +1,5 @@
 <!--pages/aes/encode/encode.wxml-->
-<nav-bar title="明文加密"></nav-bar>
+
 <form bindsubmit="submit">
   <view class="section content">
     <view class="item-y">

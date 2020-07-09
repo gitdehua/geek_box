@@ -1,5 +1,4 @@
 <!--pages/cloudflare/selectZone.wxml-->
-<nav-bar title="CloudFlare DNS API" />
 
 <view class="ui-cells">
   <navigator wx:for="{{zones}}" url="./DNS/list?zoneId={{item.zoneId}}" class="ui-cell ui-cell_access">

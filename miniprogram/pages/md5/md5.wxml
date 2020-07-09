@@ -1,5 +1,5 @@
 <!--pages/md5/md5.wxml-->
-<nav-bar title="MD5值计算"></nav-bar>
+
 <form bindsubmit="submit">
   <view class="section content">
     <view class="item-y">

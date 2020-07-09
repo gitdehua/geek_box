@@ -1,5 +1,5 @@
 <!--pages/base64/base64.wxml-->
-<nav-bar title="base64编码&解码"></nav-bar>
+
 <form bindsubmit="submit">
   <view class="section content">
     <view class="item-y">

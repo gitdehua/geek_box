@@ -1,5 +1,4 @@
 <!--pages/authorize/webAuth.wxml-->
-<nav-bar title="访问认证"></nav-bar>
 
 <mp-msg type="success" title="获取成功">
   <view slot="desc">为防止恶意请求，本次访问需输入验证码。您的验证码为</view>

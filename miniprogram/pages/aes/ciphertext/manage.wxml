@@ -1,5 +1,4 @@
 <!--pages/aes/ciphertext/manage.wxml-->
-<nav-bar title="密文管理"></nav-bar>
 
 <view wx:for='{{result}}' wx:key='' class='section content'>
   <view class='item-y'>

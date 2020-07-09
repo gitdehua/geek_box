@@ -1,5 +1,4 @@
 <!--pages/cloudflare/bindToken.wxml-->
-<nav-bar title="添加CloudFlare Token" />
 
 <form bindsubmit="addToken">
   <view class="ui-form_control-area">

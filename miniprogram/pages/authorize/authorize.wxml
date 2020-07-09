@@ -1,5 +1,4 @@
 <!--pages/authorize/authorize.wxml-->
-<nav-bar title="授权管理"></nav-bar>
 
 <mp-msg type="waiting" title="权限申请">
   <view slot="desc">相关操作需要获取以下权限，请授权小程序</view>
