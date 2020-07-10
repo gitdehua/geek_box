@@ -1,12 +1,13 @@
 <!--pages/cloudflare/selectZone.wxml-->
 
-<view class="ui-cells">
-  <navigator wx:for="{{zones}}" url="./DNS/list?zoneId={{item.zoneId}}" class="ui-cell ui-cell_access">
+<mp-slideview wx:for="{{zones}}" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap"
+  data-zone-id="{{item.zoneId}}">
+  <navigator url="./DNS/list?zoneId={{item.zoneId}}" class="ui-cell ui-cell_access">
     <view class="ui-cell_bd" style="overflow: hidden;">{{item.domainName}}</view>
     <view class="ui-cell_ft" />
   </navigator>
-</view>
+</mp-slideview>
 
 <view style="margin: 8px;">
-  <button catchtap="navToBindToken" class="ui-btn ui-flex_item">绑定 Token</button>
+  <button catchtap="navToBindToken" class="ui-btn ui-flex_item">添加 Zone</button>
 </view>
