@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "授权管理",
+  "navigationBarBackgroundColor": "@weuiBGColor",
   "usingComponents": {
     "mp-msg": "/miniprogram_npm/weui-miniprogram/msg/msg"
   }
