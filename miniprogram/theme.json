@@ -13,7 +13,8 @@
         "iconPath1": "images/home.png",
         "selectedIconPath1": "images/home_l.png",
         "iconPath2": "images/lock.png",
-        "selectedIconPath2": "images/lock_l.png"
+        "selectedIconPath2": "images/lock_l.png",
+        "weuiBGColor": "#ffffff"
     },
     "dark": {
         "navBgColor": "#191919",
@@ -29,6 +30,7 @@
         "iconPath1": "images/home.png",
         "selectedIconPath1": "images/home_l.png",
         "iconPath2": "images/lock.png",
-        "selectedIconPath2": "images/lock_l.png"
+        "selectedIconPath2": "images/lock_l.png",
+        "weuiBGColor": "#232323"
     }
 }

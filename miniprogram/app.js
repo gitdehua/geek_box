@@ -4,6 +4,8 @@ import "./utils/init.js";
 class GlobalData {
   env = (typeof __wxConfig == "object") ? ["develop", "trial", "release"].indexOf(__wxConfig.envVersion) : null;
 
+  theme = wx.getSystemInfoSync().theme;
+  
   userInfo;
   getUserInfo() {
     if (this.userInfo) {
@@ -20,13 +22,13 @@ class GlobalData {
 App({
   globalData: new GlobalData(),
 
-  onLaunch: function() {
+  onLaunch: function () {
 
     wx.cloud.init();
 
-    getUserInfo();
+    // getUserInfo();
 
-    syncCourse();
+    // syncCourse();
   },
 
   onPageNotFound(res) {
@@ -39,7 +41,7 @@ App({
 function getUserInfo() {
   wx.getStorage({
     key: 'user_info',
-    success: function(res) {
+    success: function (res) {
       getApp().globalData.userInfo = res.data;
     }
   })
@@ -48,7 +50,7 @@ function getUserInfo() {
 function syncCourse() {
   wx.getStorage({
     key: 'sync_course',
-    success: function(res) {
+    success: function (res) {
       const db = wx.cloud.database();
       const _ = db.command;
       db.collection('course').orderBy('date', 'desc').where({

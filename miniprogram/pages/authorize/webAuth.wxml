@@ -1,12 +1,12 @@
 <!--pages/authorize/webAuth.wxml-->
 
-<mp-msg type="success" title="获取成功">
-  <view slot="desc">为防止恶意请求，本次访问需输入验证码。您的验证码为</view>
+<mp-msg type="success" title="获取成功" data-weui-theme="{{weuiTheme}}">
+  <view slot="desc">为防止恶意请求，请输入以下验证码</view>
   <view slot="extend">
     <view class='code'>{{scene}}</view>
   </view>
   <view slot="handle">
-    <button class="weui-btn" bindtap='copy' type="primary">复制验证码</button>
+    <button class="ui-btn" bindtap='copy' type="primary">复制验证码</button>
   </view>
   <view slot="footer">
     <view class="weui-footer__links">
