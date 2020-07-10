@@ -1,9 +1,11 @@
 <!--pages/cloudflare/DNS/list.wxml-->
 <nav-bar title="{{zone.domainName}} Records" menus="{{menus}}" bindmenuEvent="menuEvent">
-  <view id="pageSelect" class="ui-cell" style="border-top:1px solid #ddd;">
-    <button size="mini" bindtap="changePage" data-page="{{records.result_info.page}}" data-type="previous" disabled="{{records.result_info.page==1}}">上一页</button>
+  <view id="pageSelect" class="ui-cell">
+    <button size="mini" bindtap="changePage" data-page="{{records.result_info.page}}" data-type="previous"
+      disabled="{{records.result_info.page==1}}">上一页</button>
     <text class="ui-cell_bd" style="align-self:center;text-align:center;">共{{records.result_info.total_count||0}}条 第{{records.result_info.page||0}}/{{records.result_info.total_pages||0}}页</text>
-    <button size="mini" bindtap="changePage" data-page="{{records.result_info.page}}" data-type="next" disabled="{{records.result_info.page==records.result_info.total_pages}}">下一页</button>
+    <button size="mini" bindtap="changePage" data-page="{{records.result_info.page}}" data-type="next"
+      disabled="{{records.result_info.page==records.result_info.total_pages}}">下一页</button>
   </view>
 </nav-bar>
 

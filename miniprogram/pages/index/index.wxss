@@ -1,13 +1,15 @@
 /* pages/index/index.wxss */
 
 .share {
-  color: #000 !important;
+  color: var(--color-1) !important;
   border: none !important;
   position: unset;
   font-size: inherit;
   text-align: unset;
   line-height: unset;
   border-radius: unset;
+  font-weight: unset;
+  width: unset !important;
 }
 
 .share::after {

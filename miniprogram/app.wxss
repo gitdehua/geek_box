@@ -1,17 +1,24 @@
 /**app.wxss**/
 @import "style/default.wxss";
 @import "style/iconfont.wxss";
-@import "style/layout.wxss";
 @import "style/ui.wxss";
 
 page {
-  background-color: #f8f8f8;
+  --color-bg-1: #f8f8f8;
+  background-color: var(--color-bg-1);
   font-size: 32rpx;
   line-height: 1.6;
   --theme-color: #f70;
 }
 
-.fonticon, [class*=fonticon]::before {
+@media (prefers-color-scheme: dark) {
+  page {
+    --color-bg-1: #212121;
+  }
+}
+
+.fonticon,
+[class*=fonticon]::before {
   font-family: "iconfont" !important;
 }
 
@@ -25,51 +32,7 @@ page {
   padding: 0 10px;
 }
 
-.content {
-  background-color: #fff;
-}
-
-.content>.item {
-  height: 3em;
-  line-height: 3em;
-  display: flex;
-  box-sizing: border-box;
-}
-
-.content>.item:not(:last-child), .content>.item-y:not(:last-child) {
-  border-bottom: 1px solid #ddd;
-}
-
-.content>.item>.title {
-  width: 200rpx;
-  margin-right: 5px;
-  display: flex;
-}
-
-.content>.item>.data {
-  flex: 1;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.content>.item-y {
-  padding: 1em 0;
-}
-
-.content>.item-y>.title {
-  padding-bottom: 0.5em;
-}
-
-.nav-bar {
-  background-color: #fff;
-  font-size: 32rpx;
-  height: 3rem;
-  line-height: 3rem;
-  padding: 0 40rpx;
-}
-
-.nav-bar::after {
-  content: "\3009";
+.copy {
   float: right;
-  color: #bbb;
+  color: var(--theme-color);
 }

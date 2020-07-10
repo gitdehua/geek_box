@@ -7,11 +7,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    content: ""
   },
 
   submit: function (e) {
-    var content = e.detail.value.content;
+    var content = this.data.content;
     this.setData({
       result: CryptoJS.MD5(content).toString(CryptoJS.enc.Hex)
     })

@@ -1,8 +1,6 @@
 /* pages/about/about.wxss */
-@import "/style/form.wxss";
-
-page {
-  background-color: #fff;
+.content {
+  text-align: center;
 }
 
 image {

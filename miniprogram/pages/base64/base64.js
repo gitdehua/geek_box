@@ -7,13 +7,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    content: ""
   },
 
-  submit: function(e) {
+  submit: function (e) {
     var result = "",
-      content = e.detail.value.content;
-    if (e.detail.target.dataset.action == "encode") {
+      content = this.data.content;
+    if (e.target.dataset.action == "encode") {
       result = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(content))
     } else {
       try {

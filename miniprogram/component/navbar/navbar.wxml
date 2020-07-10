@@ -9,7 +9,7 @@
       <cover-view class="separator" />
     </block>
     <block wx:if='{{menus.length>0}}'>
-      <cover-image bindtap="showMenus" src="/images/menu.png" class="nav" />
+      <cover-image bindtap="showMenus" src="{{dark?'/images/menu_l.png':'/images/menu.png'}}" class="nav" />
       <cover-view class="separator" />
     </block>
     <block wx:if='{{loading}}'>

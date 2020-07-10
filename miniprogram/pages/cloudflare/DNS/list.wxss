@@ -1,5 +1,10 @@
 /* pages/cloudflare/DNS/list.wxss */
 
+#pageSelect {
+  border-top: 1px solid #ddd;
+  background-color: var(--color-bg-1);
+}
+
 .ctl-area {
   padding: var(--spc1);
   text-align: center;

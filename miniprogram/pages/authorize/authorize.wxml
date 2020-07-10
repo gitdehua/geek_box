@@ -1,6 +1,6 @@
 <!--pages/authorize/authorize.wxml-->
 
-<mp-msg type="waiting" title="权限申请">
+<mp-msg type="waiting" title="权限申请" data-weui-theme="dark">
   <view slot="desc">相关操作需要获取以下权限，请授权小程序</view>
   <view slot="extend">
     <view>获取你的公开信息（昵称、头像...）</view>

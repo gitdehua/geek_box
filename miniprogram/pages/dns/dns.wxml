@@ -1,40 +1,46 @@
 <!--pages/dns/dns.wxml-->
 
-<form bindsubmit="submit">
-  <view class="section content">
-    <view class='item'>
-      <view class='title'>域名</view>
-      <view class='data'>
-        <input name="name" placeholder="example.com" maxlength="50"/>
+<form bindsubmit="submit" class="ui-form">
+  <view class="ui-form_control-area">
+    <view class="ui-cells_group ui-cells_group_form">
+      <view class="ui-cells ui-cells_form">
+        <view class="ui-cell">
+          <view class="ui-cell_hd">域名</view>
+          <view class="ui-cell_bd">
+            <input name="name" placeholder="example.com" maxlength="50" />
+          </view>
+        </view>
+        <view class="ui-cell">
+          <view class="ui-cell_hd">指定服务器</view>
+          <view class="ui-cell_bd">
+            <switch name="useServer" bindchange="useServer" />
+          </view>
+        </view>
       </view>
     </view>
-    <view class='item'>
-      <view class='title'>指定服务器</view>
-      <view class='data'>
-        <switch name="useServer" bindchange="useServer" />
-      </view>
-    </view>
-    <view class='item' wx:if="{{useServer}}">
-      <view class='title'>服务器IP</view>
-      <view class='data'>
-        <input name="server" placeholder="8.8.8.8" type="digit"/>
+    <view class="ui-cells_group ui-cells_group_form" wx:if="{{useServer}}">
+      <view class="ui-cells ui-cells_form">
+        <view class="ui-cell">
+          <view class="ui-cell_hd">服务器IP</view>
+          <view class="ui-cell_bd">
+            <input name="server" placeholder="8.8.8.8" type="digit" />
+          </view>
+        </view>
       </view>
     </view>
   </view>
-  <view class="section control">
-    <button form-type="submit" type='primary'>查询</button>
+  <view class="ui-form_opr-area">
+    <button class="ui-btn ui-btn_primary" form-type="submit">查询</button>
   </view>
 </form>
 
-<view wx:if="{{result}}" class="section content result">
-  <view class='item'>
-    <view class='title'>类型</view>
-    <view class='data'>记录值</view>
+<view wx:if="{{result}}" class="ui-cells result-list">
+  <view class="ui-cell">
+    <view class="ui-cell_hd">类型</view>
+    <view class="ui-cell_bd">记录值</view>
   </view>
-  <view wx:for="{{result}}" class='item'>
-    <view class='title'>{{item.type}}</view>
-    <view class='data'>{{item.address}}{{item.exchange}}{{item.value}}{{item.entries}}{{item.nsname}}</view>
+  <view class="ui-cell" wx:for="{{result}}">
+    <view class="ui-cell_hd">{{item.type}}</view>
+    <view class="ui-cell_bd">{{item.address}}{{item.exchange}}{{item.value}}{{item.entries}}{{item.nsname}}</view>
   </view>
 </view>
-
-<tab_bar />

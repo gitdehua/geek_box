@@ -1,0 +1,2 @@
+<!--component/fonticon/fonticon.wxml-->
+<text class="fonticon">{{char}}</text>

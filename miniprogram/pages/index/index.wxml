@@ -12,7 +12,7 @@
     <label class="ui-cell_bd">关于</label>
     <view class="ui-cell_ft" />
   </navigator>
-  <button class="share ui-cell ui-cell_access" hover-class="none" plain="true" open-type="share">
+  <button class="share ui-cell ui-cell_access" hover-class="none" open-type="share">
     <label class="ui-cell_bd">分享</label>
     <view class="ui-cell_ft" />
   </button>

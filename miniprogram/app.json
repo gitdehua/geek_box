@@ -18,37 +18,43 @@
     "pages/test/test"
   ],
   "window": {
-    "backgroundColor": "#f8f8f8",
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "极客宝箱",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "@navBgColor",
+    "navigationBarTextStyle": "@navTxtStyle",
+    "backgroundColor": "@bgColor",
+    "backgroundTextStyle": "@bgTxtStyle",
+    "backgroundColorTop": "@bgColorTop",
+    "backgroundColorBottom": "@bgColorBottom"
   },
   "usingComponents": {
-    "nav-bar": "/component/navbar/navbar"
+    "nav-bar": "/component/navbar/navbar",
+    "fonticon": "/component/fonticon/fonticon"
   },
   "tabBar": {
-    "color": "#777",
-    "selectedColor": "#f80",
-    "borderStyle": "black",
-    "backgroundColor": "#fff",
+    "color": "@tabFontColor",
+    "selectedColor": "@tabSelectedColor",
+    "backgroundColor": "@tabBgColor",
+    "borderStyle": "@tabBorderStyle",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "images/home.png",
-        "selectedIconPath": "images/home_l.png",
-        "text": "首页"
+        "text": "首页",
+        "iconPath": "@iconPath1",
+        "selectedIconPath": "@selectedIconPath1"
       },
       {
         "pagePath": "pages/aes/aes",
-        "iconPath": "images/lock.png",
-        "selectedIconPath": "images/lock_l.png",
-        "text": "AES"
+        "text": "AES",
+        "iconPath": "@iconPath2",
+        "selectedIconPath": "@selectedIconPath2"
       }
     ]
   },
   "sitemapLocation": "sitemap.json",
   "useExtendedLib": {
     "weui": true
-  }
+  },
+  "darkmode":true,
+  "themeLocation":"theme.json",
+  "style": "v2"
 }

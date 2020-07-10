@@ -1,22 +1,6 @@
 /* pages/dns/dns.wxss */
 
-.section {
-  padding: 0 15px;
-}
-
-.content>.item>.data>input {
-  height: 100%;
-  width: 100%;
-}
-
-.control>button {
-  margin: 10px 0;
-}
-
-.result.content>.item>.title {
-  width: 110rpx;
-}
-
-.result .item:not(:first-child)>.title {
-  font-size: smaller;
+.result-list .ui-cell_hd {
+  min-width: 3em;
+  margin-right: 10px;
 }

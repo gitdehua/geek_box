@@ -1,2 +1,2 @@
 /* pages/aes/ciphertext/manage.wxss */
-@import "/style/form.wxss";
+/* @import "/style/form.wxss"; */

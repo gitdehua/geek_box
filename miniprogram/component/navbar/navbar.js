@@ -9,7 +9,7 @@ Component({
     title: {
       type: String,
       value: '极客宝箱',
-      observer: function(newVal, oldVal, changedPath) {
+      observer: function (newVal, oldVal, changedPath) {
         this.setData({
           title: newVal
         });
@@ -18,7 +18,7 @@ Component({
     menus: {
       type: Object,
       value: null,
-      observer: function(newVal, oldVal, changedPath) {
+      observer: function (newVal, oldVal, changedPath) {
         var menus = this.data.menus;
         this.setData({
           menus,
@@ -28,13 +28,14 @@ Component({
     loading: {
       type: Boolean,
       value: false,
-      observer: function(newVal, oldVal, changedPath) {
+      observer: function (newVal, oldVal, changedPath) {
         this.setData({
           loading: newVal
         });
       }
     }
   },
+  
   data: {
     showNav: true,
     title: "极客宝箱",
@@ -50,15 +51,25 @@ Component({
     }],
     menus: []
   },
-  attached: function() {
+
+  attached: function () {
     var menuButton = wx.getMenuButtonBoundingClientRect();
+    let dark = wx.getSystemInfoSync().theme == "dark";
     this.setData({
       menuButton: wx.getMenuButtonBoundingClientRect(),
-      "navs[0].show": getCurrentPages().length > 1
-    })
+      "navs[0].show": getCurrentPages().length > 1,
+      dark
+    });
+    if (dark) {
+      this.setData({
+        "navs[0].img": "./arrow_left_l.png",
+        "navs[1].img": "./home_l.png"
+      });
+    }
   },
+
   methods: {
-    nav: function(e) {
+    nav: function (e) {
       console.log(e);
       var {
         type,
@@ -78,13 +89,13 @@ Component({
       }
     },
 
-    showMenus: function(e) {
+    showMenus: function (e) {
       this.setData({
         showMenus: !this.data.showMenus
       })
     },
 
-    menu: function(e) {
+    menu: function (e) {
       var menu = e.currentTarget.dataset.item;
 
       this.triggerEvent("menuEvent", {

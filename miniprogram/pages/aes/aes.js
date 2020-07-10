@@ -7,16 +7,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    content: ""
   },
 
-  submit: function(e) {
+  submit: function (e) {
     var result = "",
       content = e.detail.value.content,
       key = e.detail.value.key;
     if (content == "" || key == "") {
       wx.showToast({
-        title: '内容或密钥不能为空',
+        title: '内容、密钥不能为空',
         icon: "none"
       });
       return;
@@ -39,7 +39,7 @@ Page({
     });
   },
 
-  copy: function() {
+  copy: function () {
     if (!this.data.result) return;
     wx.setClipboardData({
       data: this.data.result,
