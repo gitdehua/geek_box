@@ -2,7 +2,11 @@
 
 #pageSelect {
   border-top: 1px solid #ddd;
-  background-color: var(--color-bg-1);
+  background-color: var(--color-bg-3);
+}
+
+.ui-cells {
+  background-color: var(--color-bg-3);
 }
 
 .ctl-area {
