@@ -6,7 +6,7 @@
     <view class='code'>{{scene}}</view>
   </view>
   <view slot="handle">
-    <button class="ui-btn" bindtap='copy' type="primary">复制验证码</button>
+    <button class="weui-btn" bindtap='copy' type="primary">复制验证码</button>
   </view>
   <view slot="footer">
     <view class="weui-footer__links">
