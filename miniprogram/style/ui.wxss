@@ -1,6 +1,4 @@
-[class*=ui] {
-  margin: 0;
-  padding: 0;
+[class|=ui] {
   --spc1: 8px;
   --spc2: 12px;
   --spc3: 16px;
@@ -14,7 +12,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  [class*=ui] {
+  [class|=ui] {
     --color-1: #ffffff;
     --color-2: rgba(255, 255, 255, 0.2);
     --color-3: rgba(255, 255, 255, 0.9);
@@ -75,36 +73,17 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 14px;
-  padding-right: 14px;
+  padding: 8px 24px;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 17px;
   text-align: center;
   text-decoration: none;
-  line-height: 2.55555556;
-  border-radius: 5px;
+  line-height: 1.41176471;
+  border-radius: 4px;
   -webkit-tap-highlight-color: transparent;
   overflow: hidden;
   color: var(--color-1);
   background-color: var(--color-bg-3);
-  width: 500rpx;
-}
-
-.ui-btn::after {
-  content: " ";
-  width: 200%;
-  height: 200%;
-  position: absolute;
-  display: inline-block;
-  top: 0;
-  left: 0;
-  border: 1px solid var(--color-2);
-  -webkit-transform: scale(0.5);
-  transform: scale(0.5);
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  box-sizing: border-box;
-  border-radius: 10px;
 }
 
 .ui-btn_primary {
