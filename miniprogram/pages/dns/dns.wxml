@@ -11,7 +11,7 @@
           </view>
         </view>
         <view class="ui-cell">
-          <view class="ui-cell_hd">指定服务器</view>
+          <view class="ui-cell_hd">指定服务器<help msg="{{helpMsg}}" /></view>
           <view class="ui-cell_bd">
             <switch name="useServer" bindchange="useServer" />
           </view>

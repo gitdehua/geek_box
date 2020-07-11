@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    useServer: false
+    useServer: false,
+    helpMsg:"公共DNS服务器IP地址\n8.8.8.8(google);223.5.5.5(AliDNS)"
   },
 
   useServer: function(e) {
