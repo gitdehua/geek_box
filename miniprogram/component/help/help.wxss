@@ -1,0 +1,5 @@
+/* component/help/help.wxss */
+
+.icon {
+  padding: 0 10rpx;
+}

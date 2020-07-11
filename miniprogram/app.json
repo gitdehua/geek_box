@@ -28,7 +28,8 @@
   },
   "usingComponents": {
     "nav-bar": "/component/navbar/navbar",
-    "fonticon": "/component/fonticon/fonticon"
+    "fonticon": "/component/fonticon/fonticon",
+    "help": "/component/help/help"
   },
   "tabBar": {
     "color": "@tabFontColor",
@@ -54,7 +55,7 @@
   "useExtendedLib": {
     "weui": true
   },
-  "darkmode":true,
-  "themeLocation":"theme.json",
+  "darkmode": true,
+  "themeLocation": "theme.json",
   "style": "v2"
 }
